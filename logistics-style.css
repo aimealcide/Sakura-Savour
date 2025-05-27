@@ -1,0 +1,85 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(logistics.jpg);
+    background-color: #f4f4f4;
+    color: #333;
+}
+/* Top-Right Corner Navigation */
+.top-right-nav {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    text-align: right;
+}
+
+.top-right-nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    padding: 5px 10px;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+.top-right-nav a:hover {
+    background-color: white;
+    color: #006400;
+}
+
+header {
+    background-color: #006400b0;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+nav {
+    background-color: #228b22b6;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav a {
+    color: rgb(255, 255, 255);
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding: 2rem;
+    margin: 1rem auto;
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.525);
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #006400;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+ul, ol {
+    margin: 1rem 0;
+    padding-left: 20px;
+}
+
+footer {
+    background-color: #228b22c7;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
