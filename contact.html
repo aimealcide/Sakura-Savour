@@ -63,6 +63,12 @@
 
         document.getElementById('contact-form').addEventListener('submit', function(event) {
             event.preventDefault();
+            // check if reCAPTCHA is successful
+            var recaptchaResponse = grecpatcha.getResponse();
+            if (recaptchaResponse.length === 0) {
+                alert('Please complete the reCAPTCHA.');
+                return; // stop form submission
+            }
 
             emailjs.sendForm('Sakura service', 'Sakura service 2', this)
                 .then(function() {
