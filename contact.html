@@ -16,7 +16,7 @@
         <a href="index.html">Home</a>
         <a href="logistics.html">Logistics</a>
         <a href="counseling.html">Counseling</a>
-        <a href="restaurant.html">Restaurant Logistics</a>
+        <a href="restaurant.html">Bar & Restaurant</a>
     </nav>
 
     <section id="contact-info">
@@ -58,15 +58,15 @@
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script>
         (function() {
-            emailjs.init("Ra81LVkobf5KsxLai"); // Replace with your actual EmailJS public key
+            emailjs.init("Ra81LVkobf5KsxLai");
         })();
 
         document.getElementById('contact-form').addEventListener('submit', function(event) {
             event.preventDefault();
             // check if reCAPTCHA is successful
             var recaptchaResponse = grecpatcha.getResponse();
-            if (recaptchaResponse.length === 0) {
-                alert('Please complete the reCAPTCHA.');
+            if (!recaptchaResponse) {
+                alert('Please verify that you are not a robot.');
                 return; // stop form submission
             }
 

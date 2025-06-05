@@ -8,7 +8,7 @@ body {
 }
 
 header {
-    background-color: #00796b;
+    background-color: #00790e;
     color: white;
     text-align: center;
     padding: 2rem 0;
@@ -34,11 +34,11 @@ header {
 
 .top-right-nav a:hover {
     background-color: white;
-    color: #006400;
+    color: #00790e;
 }
 
 nav {
-    background-color: #004d40;
+    background-color: #00600b;
     padding: 1rem;
     text-align: center;
 }
@@ -65,7 +65,7 @@ section {
 }
 
 h2 {
-    color: #004d40;
+    color: #00790e;
     text-align: center;
     margin-bottom: 1rem;
 }
@@ -76,7 +76,7 @@ ul {
 }
 
 footer {
-    background-color: #00796b;
+    background-color: #00790e;
     color: white;
     text-align: center;
     padding: 1rem 0;
@@ -104,7 +104,7 @@ footer {
 
 #contact-form h2 {
     text-align: center;
-    color: #2d4a53;
+    color: #00790e;
 }
 
 #contact-form label {
