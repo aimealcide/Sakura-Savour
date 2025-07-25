@@ -35,6 +35,30 @@ body {
     color: #006400;
 }
 
+/* Top-Left Corner Navigation */
+.top-left-nav {
+    position: absolute;
+    top: 1em;
+    left: 2em;
+    z-index: 100;
+}
+
+.top-left-nav a {
+    margin-right: 1.2em;
+    text-decoration: none;
+    color: #2d4a53;
+    font-weight: 600;
+    padding: 0.4em 1em;
+    border-radius: 6px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.top-left-nav a:hover,
+.top-left-nav a:focus {
+    background: #2d4a53;
+    color: #fff;
+}
+
 /* Header */
 header {
     background-color: rgba(0, 128, 0, 0.8); /* Semi-transparent green */
@@ -71,6 +95,56 @@ header {
     background-color: white;
     color: #006400;
     transform: scale(1.1);
+}
+
+/* Section Styles */
+section {
+    max-width: 400px;
+    margin: 5em auto 0 auto;
+    background: #fff;
+    padding: 2em 2.5em;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+}
+
+section h2 {
+    text-align: center;
+    color: #2d4a53;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+form label {
+    font-weight: 600;
+    margin-bottom: 0.2em;
+}
+
+form input {
+    padding: 0.6em;
+    border: 1px solid #bcd0c7;
+    border-radius: 8px;
+    font-size: 1em;
+}
+
+form button[type="submit"] {
+    background: #2d4a53;
+    color: #fff;
+    padding: 0.8em;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+form button[type="submit"]:hover {
+    background: #1b2e35;
 }
 
 /* Footer */

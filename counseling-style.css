@@ -1,3 +1,4 @@
+/* counseling-style.css */
 /* General Styles */
 body {
     font-family: Arial, sans-serif;
@@ -36,7 +37,11 @@ header {
     background-color: white;
     color: #00790e;
 }
-
+nav {
+    background-color: #005f0b;
+    padding: 1rem;
+    text-align: center;
+}
 nav {
     background-color: #00600b;
     padding: 1rem;
@@ -138,4 +143,104 @@ footer {
 
 #contact-form button[type="submit"]:hover {
     background: #1b2e35;
+}
+
+/* Bar & Restaurant sub-navigation */
+.bar-nav {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    margin: 1.5em 0 2em 0;
+}
+
+.bar-nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 0.5em 1.2em;
+    border-radius: 6px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.bar-nav a:hover,
+.bar-nav a:focus {
+    background: #2d4a53;
+    color: #fff;
+}
+
+/* Section card style for Bar & Restaurant pages */
+section {
+    max-width: 700px;
+    margin: 2em auto;
+    background: #fff;
+    padding: 2em 2.5em;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+}
+
+section h2 {
+    color: #2d4a53;
+    margin-top: 0;
+    text-align: center;
+}
+
+section ul {
+    padding-left: 1.2em;
+}
+
+section ul li {
+    margin-bottom: 0.7em;
+    font-size: 1.05em;
+}
+
+/* Improved form styles for Bar & Restaurant pages */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+form label {
+    font-weight: 600;
+    margin-bottom: 0.2em;
+}
+
+form input,
+form textarea {
+    padding: 0.6em;
+    border: 1px solid #bcd0c7;
+    border-radius: 8px;
+    font-size: 1em;
+    background: #f7fafb;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+form button[type="submit"] {
+    background: #2d4a53;
+    color: #fff;
+    padding: 0.8em;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+form button[type="submit"]:hover {
+    background: #1b2e35;
+}
+
+/* Responsive design for Bar & Restaurant pages */
+@media (max-width: 800px) {
+    section {
+        max-width: 98vw;
+        padding: 1em 0.5em;
+    }
+    .bar-nav {
+        gap: 1em;
+    }
 }

@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Online | Bar & Restaurant</title>
+    <link rel="stylesheet" href="counseling-style.css">
+    <style>
+        /* Extra styles for menu and cart */
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5em;
+            margin-bottom: 2em;
+        }
+        .menu-item {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+            padding: 1em;
+            text-align: center;
+        }
+        .menu-item img {
+            width: 100%;
+            max-width: 140px;
+            border-radius: 8px;
+            margin-bottom: 0.7em;
+        }
+        .menu-item h4 {
+            margin: 0.5em 0 0.2em 0;
+        }
+        .menu-item p {
+            margin: 0.2em 0 0.5em 0;
+            color: #555;
+        }
+        .menu-item button {
+            background: #2d4a53;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            padding: 0.5em 1.2em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .menu-item button:hover {
+            background: #1b2e35;
+        }
+        .cart {
+            background: #f7fafb;
+            border-radius: 12px;
+            padding: 1em 1.5em;
+            margin-bottom: 2em;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+        }
+        .cart h3 {
+            margin-top: 0;
+        }
+        .cart-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 1em 0;
+        }
+        .cart-list li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5em;
+        }
+        .cart-list button {
+            background: #e74c3c;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 0.2em 0.7em;
+            font-size: 0.95em;
+            cursor: pointer;
+        }
+        .cart-total {
+            font-weight: bold;
+            text-align: right;
+            margin-bottom: 1em;
+        }
+        .view-cart-btn {
+            background: #2d4a53;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 0.7em 1.5em;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            margin-bottom: 1em;
+            transition: background 0.2s;
+        }
+        .view-cart-btn:hover {
+            background: #1b2e35;
+        }
+        @media (max-width: 700px) {
+            .menu-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .top-left-nav {
+            position: absolute;
+            top: 1em;
+            left: 1em;
+            z-index: 1000;
+        }
+        .top-left-nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-right: 1em;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+        <!--Top Right Corner Links-->
+    <div class="top-right-nav">
+        <a href="index.html">Main Page</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+    </div> 
+    <header>
+        <h1>Bar & Restaurant</h1>
+        <nav class="bar-nav">
+            <a href="restaurant.html">Home</a>
+            <a href="our services.html">What We Offer</a>
+            <a href="order.html">Give Your Order</a>
+            <a href="menu.html">Our Menu</a>
+        </nav>
+        <div class="top-left-nav">
+            <a href="login.html">Login</a>
+            <a href="signup.html">Sign Up</a>
+        </div>
+    </header>
+    <section>
+        <h2>Order Online</h2>
+        <button class="view-cart-btn" id="view-cart-btn" onclick="toggleCart()">View Cart</button>
+
+        <!-- FOOD SECTION -->
+<h2>Food</h2>
+
+<!-- Breakfast -->
+<h3>Breakfast</h3>
+<div class="menu-grid">
+    <div class="menu-item" data-name="Omelette" data-price="3500">
+        <img src="images/omelette.jpg" alt="Omelette">
+        <h4>Omelette</h4>
+        <p>3,500 RWF</p>
+        <button type="button" onclick="addToCart('Omelette', 3500)">Add to Cart</button>
+    </div>
+    <div class="menu-item" data-name="Pancakes" data-price="4000">
+        <img src="images/pancakes.jpg" alt="Pancakes">
+        <h4>Pancakes</h4>
+        <p>4,000 RWF</p>
+        <button type="button" onclick="addToCart('Pancakes', 4000)">Add to Cart</button>
+    </div>
+    <!-- Add more breakfast items here -->
+</div>
+
+<!-- Soup -->
+<h3>Soup</h3>
+<div class="menu-grid">
+    <div class="menu-item" data-name="Chicken Soup" data-price="5000">
+        <img src="images/chicken-soup.jpg" alt="Chicken Soup">
+        <h4>Chicken Soup</h4>
+        <p>5,000 RWF</p>
+        <button type="button" onclick="addToCart('Chicken Soup', 5000)">Add to Cart</button>
+    </div>
+    <div class="menu-item" data-name="Vegetable Soup" data-price="4500">
+        <img src="images/vegetable-soup.jpg" alt="Vegetable Soup">
+        <h4>Vegetable Soup</h4>
+        <p>4,500 RWF</p>
+        <button type="button" onclick="addToCart('Vegetable Soup', 4500)">Add to Cart</button>
+    </div>
+    <!-- Add more soup items here -->
+</div>
+
+<!-- Pizzas -->
+<h3>Pizzas</h3>
+<div class="menu-grid">
+    <div class="menu-item" data-name="Vegetable Pizza" data-price="7000">
+        <img src="images/vegetable-pizza.jpg" alt="Vegetable Pizza">
+        <h4>Vegetable Pizza</h4>
+        <p>7,000 RWF</p>
+        <button type="button" onclick="addToCart('Vegetable Pizza', 7000)">Add to Cart</button>
+    </div>
+    <div class="menu-item" data-name="Chicken Pizza" data-price="8000">
+        <img src="images/chicken-pizza.jpg" alt="Chicken Pizza">
+        <h4>Chicken Pizza</h4>
+        <p>8,000 RWF</p>
+        <button type="button" onclick="addToCart('Chicken Pizza', 8000)">Add to Cart</button>
+    </div>
+    <!-- Add more pizza items here -->
+</div>
+
+<!-- Salads -->
+<h3>Salads</h3>
+<div class="menu-grid">
+    <div class="menu-item" data-name="Greek Salad" data-price="5000">
+        <img src="images/greek-salad.jpg" alt="Greek Salad">
+        <h4>Greek Salad</h4>
+        <p>5,000 RWF</p>
+        <button type="button" onclick="addToCart('Greek Salad', 5000)">Add to Cart</button>
+    </div>
+    <div class="menu-item" data-name="Caesar Salad" data-price="5500">
+        <img src="images/caesar-salad.jpg" alt="Caesar Salad">
+        <h4>Caesar Salad</h4>
+        <p>5,500 RWF</p>
+        <button type="button" onclick="addToCart('Caesar Salad', 5500)">Add to Cart</button>
+    </div>
+    <!-- Add more salad items here -->
+</div>
+
+<!-- Dessert -->
+<h3>Dessert</h3>
+<div class="menu-grid">
+    <div class="menu-item" data-name="Ice Cream" data-price="3000">
+        <img src="images/ice-cream.jpg" alt="Ice Cream">
+        <h4>Ice Cream</h4>
+        <p>3,000 RWF</p>
+        <button type="button" onclick="addToCart('Ice Cream', 3000)">Add to Cart</button>
+    </div>
+    <div class="menu-item" data-name="Fruit Salad" data-price="3500">
+        <img src="images/fruit-salad.jpg" alt="Fruit Salad">
+        <h4>Fruit Salad</h4>
+        <p>3,500 RWF</p>
+        <button type="button" onclick="addToCart('Fruit Salad', 3500)">Add to Cart</button>
+    </div>
+    <!-- Add more dessert items here -->
+</div>
+
+<!-- Snacks -->
+<h3>Snacks</h3>
+<div class="menu-grid">
+    <div class="menu-item" data-name="French Fries" data-price="3000">
+        <img src="images/french-fries.jpg" alt="French Fries">
+        <h4>French Fries</h4>
+        <p>3,000 RWF</p>
+        <button type="button" onclick="addToCart('French Fries', 3000)">Add to Cart</button>
+    </div>
+    <div class="menu-item" data-name="Beef Brochettes" data-price="9000">
+        <img src="images/beef-brochettes.jpg" alt="Beef Brochettes">
+        <h4>Beef Brochettes</h4>
+        <p>9,000 RWF</p>
+        <button type="button" onclick="addToCart('Beef Brochettes', 9000)">Add to Cart</button>
+    </div>
+    <!-- Add more snack items here -->
+</div>
+
+<!-- BEVERAGES SECTION -->
+<h2>Beverages</h2>
+<div class="menu-grid">
+    <div class="menu-item" data-name="Beer" data-price="2500">
+        <img src="images/beer.jpg" alt="Beer">
+        <h4>Beer (Local)</h4>
+        <p>2,500 RWF</p>
+        <button type="button" onclick="addToCart('Beer (Local)', 2500)">Add to Cart</button>
+    </div>
+    <div class="menu-item" data-name="Wine" data-price="4000">
+        <img src="images/wine.jpg" alt="Wine">
+        <h4>Wine (Glass)</h4>
+        <p>4,000 RWF</p>
+        <button type="button" onclick="addToCart('Wine (Glass)', 4000)">Add to Cart</button>
+    </div>
+    <div class="menu-item" data-name="Fresh Juice" data-price="2000">
+        <img src="images/fresh-juice.jpg" alt="Fresh Juice">
+        <h4>Fresh Juice</h4>
+        <p>2,000 RWF</p>
+        <button type="button" onclick="addToCart('Fresh Juice', 2000)">Add to Cart</button>
+    </div>
+    <!-- Add more beverage items here -->
+</div>
+
+        <div class="cart" id="cart-section" style="display:none;">
+            <h3>Your Cart</h3>
+            <ul class="cart-list" id="cart-list"></ul>
+            <div class="cart-total" id="cart-total"></div>
+        </div>
+
+        <form id="checkout-form" style="display:none;">
+            <h3>Checkout</h3>
+            <label for="customer-name">Your Name:</label>
+            <input type="text" id="customer-name" name="customer-name" required>
+
+            <label for="customer-contact">Contact (Phone or Email):</label>
+            <input type="text" id="customer-contact" name="customer-contact" required>
+
+            <label for="order-notes">Order Notes (optional):</label>
+            <textarea id="order-notes" name="order-notes" rows="2"></textarea>
+
+            <label for="payment-method">Payment Method:</label>
+            <select id="payment-method" name="payment-method" required>
+                <option value="">Select payment method</option>
+                <option value="cash">Cash on Delivery</option>
+                <option value="mobile">Mobile Money</option>
+                <option value="card">Credit/Debit Card</option>
+            </select>
+
+            <input type="hidden" id="order-summary" name="order-summary">
+
+            <button type="submit">Place Order</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; Sakura KGL Company. All Rights Reserved.</p>
+    </footer>
+    <div id="mobile-money-popup" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.5); z-index:2000; justify-content:center; align-items:center;">
+        <div style="background:#fff; padding:2em; border-radius:12px; max-width:350px; text-align:center;">
+            <h3>Mobile Money Payment</h3>
+            <p>Please check your phone for a Mobile Money payment prompt.</p>
+            <button onclick="closeMobileMoneyPopup()">OK</button>
+        </div>
+    </div>
+    <script>
+        // Simple cart logic
+        let cart = [];
+        let cartVisible = false;
+
+        function addToCart(name, price) {
+            const existing = cart.find(item => item.name === name);
+            if (existing) {
+                existing.qty += 1;
+            } else {
+                cart.push({ name, price, qty: 1 });
+            }
+            updateCart();
+        }
+
+        function removeFromCart(name) {
+            cart = cart.filter(item => item.name !== name);
+            updateCart();
+        }
+
+        function updateCart() {
+            const cartSection = document.getElementById('cart-section');
+            const cartList = document.getElementById('cart-list');
+            const cartTotal = document.getElementById('cart-total');
+            const checkoutForm = document.getElementById('checkout-form');
+            if (cart.length === 0) {
+                cartSection.style.display = 'none';
+                checkoutForm.style.display = 'none';
+                return;
+            }
+            if (cartVisible) {
+                cartSection.style.display = 'block';
+                checkoutForm.style.display = 'block';
+            }
+            cartList.innerHTML = '';
+            let total = 0;
+            cart.forEach(item => {
+                total += item.price * item.qty;
+                const li = document.createElement('li');
+                li.innerHTML = `
+                    <span>${item.name} x${item.qty} - ${item.price * item.qty} RWF</span>
+                    <button type="button" onclick="removeFromCart('${item.name}')">Remove</button>
+                `;
+                cartList.appendChild(li);
+            });
+            cartTotal.textContent = 'Total: ' + total.toLocaleString() + ' RWF';
+            // Set order summary for form
+            document.getElementById('order-summary').value = cart.map(item => `${item.name} x${item.qty}`).join(', ') + ` | Total: ${total.toLocaleString()} RWF`;
+        }
+
+        function toggleCart() {
+            cartVisible = !cartVisible;
+            updateCart();
+            document.getElementById('cart-section').style.display = cartVisible && cart.length > 0 ? 'block' : 'none';
+            document.getElementById('checkout-form').style.display = cartVisible && cart.length > 0 ? 'block' : 'none';
+            document.getElementById('view-cart-btn').textContent = cartVisible ? 'Hide Cart' : 'View Cart';
+        }
+
+        function closeMobileMoneyPopup() {
+            document.getElementById('mobile-money-popup').style.display = 'none';
+        }
+
+        // Handle checkout form
+        document.getElementById('checkout-form').addEventListener('submit', async function(event) {
+            event.preventDefault();
+            const payment = document.getElementById('payment-method').value;
+            const contact = document.getElementById('customer-contact').value;
+            if (!payment) {
+                alert('Please select a payment method.');
+                return;
+            }
+            if (payment === 'mobile') {
+                // Send order and phone to backend for Mobile Money API
+                const response = await fetch('/api/mobile-money', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        contact,
+                        order: document.getElementById('order-summary').value
+                    })
+                });
+                if (response.ok) {
+                    document.getElementById('mobile-money-popup').style.display = 'flex';
+                } else {
+                    alert('Payment initiation failed. Try again.');
+                }
+            } else {
+                alert('Thank you for your order! We will contact you soon.');
+            }
+            cart = [];
+            cartVisible = false;
+            updateCart();
+            this.reset();
+            document.getElementById('view-cart-btn').textContent = 'View Cart';
+        });
+    </script>
+</body>
+</html>
