@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Order Online | Bar & Restaurant</title>
-    <link rel="stylesheet" href="counseling-style.css">
+    <link rel="stylesheet" href="restaurant-style.css">
     <style>
         /* Extra styles for menu and cart */
         .menu-grid {
@@ -130,9 +130,6 @@
             <a href="order.html">Give Your Order</a>
             <a href="menu.html">Our Menu</a>
         </nav>
-        <div class="top-left-nav">
-            <a href="login.html">Login</a>
-            <a href="signup.html">Sign Up</a>
         </div>
     </header>
     <section>
@@ -301,7 +298,11 @@
 
             <input type="hidden" id="order-summary" name="order-summary">
 
+            <!--
             <button type="submit">Place Order</button>
+            -->
+            <button type="button" disabled style="background:#aaa;cursor:not-allowed;">Coming Soon</button>
+            <p style="color:#e74c3c;font-weight:bold;">Online ordering is coming soon!</p>
         </form>
     </section>
     <footer>
@@ -377,37 +378,10 @@
         }
 
         // Handle checkout form
-        document.getElementById('checkout-form').addEventListener('submit', async function(event) {
+        document.getElementById('checkout-form').addEventListener('submit', function(event) {
             event.preventDefault();
-            const payment = document.getElementById('payment-method').value;
-            const contact = document.getElementById('customer-contact').value;
-            if (!payment) {
-                alert('Please select a payment method.');
-                return;
-            }
-            if (payment === 'mobile') {
-                // Send order and phone to backend for Mobile Money API
-                const response = await fetch('/api/mobile-money', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        contact,
-                        order: document.getElementById('order-summary').value
-                    })
-                });
-                if (response.ok) {
-                    document.getElementById('mobile-money-popup').style.display = 'flex';
-                } else {
-                    alert('Payment initiation failed. Try again.');
-                }
-            } else {
-                alert('Thank you for your order! We will contact you soon.');
-            }
-            cart = [];
-            cartVisible = false;
-            updateCart();
-            this.reset();
-            document.getElementById('view-cart-btn').textContent = 'View Cart';
+            alert('Online ordering is coming soon!');
+            // Optionally, you can reset the form or hide the cart here
         });
     </script>
 </body>
