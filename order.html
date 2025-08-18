@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="restaurant-style.css">
     <style>
         /* Extra styles for menu and cart */
+         body, section { background: #151515 !important; }
         .menu-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -14,7 +15,7 @@
             margin-bottom: 2em;
         }
         .menu-item {
-            background: #fff;
+            background: #141414;
             border-radius: 12px;
             box-shadow: 0 2px 12px rgba(0,0,0,0.07);
             padding: 1em;
@@ -47,7 +48,7 @@
             background: #1b2e35;
         }
         .cart {
-            background: #f7fafb;
+            background: #141414;
             border-radius: 12px;
             padding: 1em 1.5em;
             margin-bottom: 2em;
@@ -327,7 +328,11 @@
             } else {
                 cart.push({ name, price, qty: 1 });
             }
+            cartVisible = true; // Show cart immediately after adding
             updateCart();
+            document.getElementById('cart-section').style.display = 'block';
+            document.getElementById('checkout-form').style.display = 'block';
+            document.getElementById('view-cart-btn').textContent = 'Hide Cart';
         }
 
         function removeFromCart(name) {
