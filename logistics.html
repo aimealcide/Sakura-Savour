@@ -1,80 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Logistics Services</title>
-    <link rel="stylesheet" href="logistics-style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Freight Logistics — Sakura KGL</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Efficient Logistics Solutions</h1>
-        <p>Your Partner in Seamless Supply Chain Management</p>
-    </header>
-     <!-- Top-Right Corner Links -->
-     <div class="top-right-nav">
-        <a href="about.html">About Us</a>
-        <a href="contact.html">Contact Us</a>
+
+<header class="topbar" id="topbar">
+  <a href="index.html" class="topbar-logo">
+    <div class="logo-icon">S</div>
+    <div class="logo-text">Sakura <span>KGL</span></div>
+  </a>
+  <nav>
+    <ul class="topbar-nav" id="main-nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="logistics.html" class="active">Freight Logistics</a></li>
+      <li><a href="counseling.html">Business Advisory</a></li>
+      <li><a href="canteen.html">Canteen Mgmt</a></li>
+      <li><a href="about.html">About Us</a></li>
+    </ul>
+  </nav>
+  <div class="topbar-actions">
+    <a href="contact.html" class="btn-ghost">Contact</a>
+    <a href="contact.html#booking" class="btn-primary">📅 Book a Meeting</a>
+  </div>
+  <button class="menu-toggle" id="menu-toggle"><span></span><span></span><span></span></button>
+</header>
+
+<!-- Page Hero -->
+<div class="page-hero" style="background-image: linear-gradient(135deg,rgba(7,26,13,0.97),rgba(10,61,31,0.88)), url('logistics.jpg'); background-size:cover; background-position:center;">
+  <div class="section-label">Our Services</div>
+  <h1>Freight Logistics</h1>
+  <p>Seamless, reliable, and efficient supply chain management — from Rwanda to the world.</p>
+  <div class="breadcrumb">
+    <a href="index.html">Home</a> › <span>Freight Logistics</span>
+  </div>
+</div>
+
+<!-- Mission -->
+<div class="section">
+  <div class="two-col">
+    <div>
+      <div class="section-label">Our Mission</div>
+      <h2 class="section-title">Your Supply Chain, Perfectly Managed</h2>
+      <p class="section-subtitle">To meet and exceed customer requirements, fostering satisfaction that leads to loyalty and the acquisition of new clients. We deliver on every commitment.</p>
+      <ul class="feature-list">
+        <li>End-to-end cargo visibility and tracking</li>
+        <li>Expert customs clearance and documentation</li>
+        <li>Flexible warehousing across Kigali</li>
+        <li>Air and sea freight globally connected</li>
+        <li>Professional inland transportation network</li>
+        <li>Management and logistics consulting</li>
+      </ul>
+      <br>
+      <a href="contact.html#booking" class="btn-primary" style="font-size:0.95rem;padding:0.75rem 1.8rem;border-radius:8px;">📅 Discuss Your Needs</a>
     </div>
+    <div>
+      <div style="background:linear-gradient(135deg,var(--green-100),#c8ebd4);border-radius:var(--radius-lg);padding:3rem;height:100%;min-height:360px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;position:relative;overflow:hidden;">
+        <div style="font-size:5rem;margin-bottom:1.5rem;">🚢</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:600;color:var(--green-900);margin-bottom:0.5rem;">Global Reach</div>
+        <p style="color:var(--text-mid);font-size:0.92rem;">Air · Sea · Road · Warehousing · Consulting</p>
+        <div style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;">
+          <span style="background:white;padding:0.4rem 1rem;border-radius:100px;font-size:0.78rem;font-weight:600;color:var(--green-700);">✈️ Airfreight</span>
+          <span style="background:white;padding:0.4rem 1rem;border-radius:100px;font-size:0.78rem;font-weight:600;color:var(--green-700);">🚢 Seafreight</span>
+          <span style="background:white;padding:0.4rem 1rem;border-radius:100px;font-size:0.78rem;font-weight:600;color:var(--green-700);">🚛 Inland</span>
+          <span style="background:white;padding:0.4rem 1rem;border-radius:100px;font-size:0.78rem;font-weight:600;color:var(--green-700);">📦 Warehousing</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="#Values">Core Values</a>
-        <a href="#services">Our Services</a>
-        <a href="#vision">Our Vision</a>
-        <a href="#contact">Contact Us</a>
-    </nav>
+<!-- Services Grid -->
+<div class="section-full">
+  <div class="section">
+    <div class="section-label">Our Offerings</div>
+    <h2 class="section-title">Comprehensive Logistics Services</h2>
+    <p class="section-subtitle">Every service tailored to your business requirements, delivered with professionalism and precision.</p>
 
-    <section id="mission">
-        <h2>Our Mission</h2>
-        <p>
-            To meet & exceed customer requiremnets, fostering saisfaction that leads to loyalty & the aquisition of new clients.
-        </p>
-    </section>
- <section id="why us">
-        <h2>Why Choose us</h2>
-        <p>
-            We endover to bring solutions to your problems and our goal is focusing to this concept:
-            <strong>Don`t tell me how good you make it; tell me how good it makes me when i use it.</strong>"Michael Lebouef, Ph.d"
-        </p>
-    </section>
- <section id="Values">
-        <h2>Core Values</h2>
-        <p>
-            <li>Integrity</li>
-            <li>Reliability</li>
-            <li>Proffesionalism</li>
-            <li>Customer Focus</li>
-        </p>
-    </section>
+    <div class="cards-grid">
+      <div class="card">
+        <div class="card-icon">📦</div>
+        <h3>Cargo Handling</h3>
+        <p>Professional loading, unloading, and management of all cargo types with care and precision at every touchpoint.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🛃</div>
+        <h3>Customs Clearance</h3>
+        <p>Fast and compliant customs documentation and clearance to keep your shipments moving without delays.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🏭</div>
+        <h3>Warehousing</h3>
+        <p>Secure, organized warehousing facilities with inventory management and real-time stock tracking.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">📫</div>
+        <h3>Packaging</h3>
+        <p>Protective and professional packaging solutions to ensure your goods arrive in perfect condition.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🚛</div>
+        <h3>Inland Transportation</h3>
+        <p>Reliable road transport throughout Rwanda and the East African region with our trusted fleet network.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">✈️</div>
+        <h3>Airfreight & Seafreight</h3>
+        <p>International freight forwarding by air and sea, connecting Rwanda to global trade routes efficiently.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">📋</div>
+        <h3>Logistics Consulting</h3>
+        <p>Expert analysis and optimization of your logistics processes to reduce costs and improve delivery times.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">💼</div>
+        <h3>Management Consulting</h3>
+        <p>Strategic organizational consulting to align your management structure with your logistics goals.</p>
+      </div>
+    </div>
+  </div>
+</div>
 
-    <section id="services">
-        <h2>Our Services</h2>
-        <ul>
-            <li>Cargo handling</li>
-            <li>Customs Clearance</li>
-            <li>Warehousing activities</li>
-            <li>Packaging</li>
-            <li>Inland transportation</li>
-            <li>Airfreight and seafreight</li>
-            <li>Logistics consulting</li>
-            <li>Management consulting</li>
-        </ul>
-    </section>
+<!-- Vision -->
+<div class="section">
+  <div class="accent-panel" style="text-align:center;max-width:800px;margin:0 auto;">
+    <div class="section-label" style="justify-content:center;">Our Vision</div>
+    <h2 class="section-title">Becoming the Global Benchmark for Professional Service</h2>
+    <p class="section-subtitle" style="margin:0 auto 2rem;max-width:550px;">We set the standard for logistics excellence in Rwanda and beyond — reliable, innovative, and uncompromising in quality.</p>
+    <a href="contact.html#booking" class="btn-hero-primary">Start a Conversation →</a>
+  </div>
+</div>
 
-    <section id="vision">
-        <h2>Our Vision</h2>
-        <p>
-            Become the Global Benchmark for the provision of proffesional service provider.
-        </p>
-    </section>
+<!-- Core Values -->
+<div style="padding:0 3rem 5rem;max-width:1200px;margin:0 auto;">
+  <div class="section-label">Foundation</div>
+  <h2 class="section-title" style="margin-bottom:2rem;">Core Values</h2>
+  <div class="value-cards">
+    <div class="value-card"><span class="v-icon">🤝</span><h3>Integrity</h3><p>Unwavering honesty in every transaction and relationship</p></div>
+    <div class="value-card"><span class="v-icon">🔒</span><h3>Reliability</h3><p>Dependable delivery on every promise we make</p></div>
+    <div class="value-card"><span class="v-icon">⭐</span><h3>Professionalism</h3><p>World-class standards in every interaction</p></div>
+    <div class="value-card"><span class="v-icon">🎯</span><h3>Client Focus</h3><p>Your success is our most important metric</p></div>
+  </div>
+</div>
 
-    <footer id="contact">
-        <h3>Contact Us</h3>
-        <P>Address: Kigali, Kacyiru KG 5 Ave 36</P>
-        <p>&copy; Sakura KGL One Company. All Rights Reserved.</p>
-        <p>Comany Phone: +250 788 688 137, Company Email: sakurakgltd@gmail.com</p>
-        <p>Managing Director phone: +250 788 501 317, MD Email: claire.benihirwe@gmail.com</p>
-    </footer>
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <span class="logo-text">Sakura <span>KGL</span></span>
+      <span class="tagline">Your Ideal Type</span>
+      <p>Rwanda's trusted partner for logistics, business advisory, and professional canteen management.</p>
+    </div>
+    <div class="footer-col"><h4>Services</h4><ul>
+      <li><a href="logistics.html">Freight Logistics</a></li>
+      <li><a href="counseling.html">Business Advisory</a></li>
+      <li><a href="canteen.html">Canteen Management</a></li>
+      <li><a href="contact.html#booking">Book a Meeting</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Company</h4><ul>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul>
+      <li><a href="mailto:sakurakgltd@gmail.com">sakurakgltd@gmail.com</a></li>
+      <li><a href="tel:+250788688137">+250 788 688 137</a></li>
+      <li><span>Kacyiru KG 5 Ave 36, Kigali</span></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Sakura KGL Company Ltd. All Rights Reserved.</span>
+    <span>Kigali, Rwanda</span>
+  </div>
+</footer>
+<script>
+  window.addEventListener('scroll',()=>document.getElementById('topbar').classList.toggle('scrolled',scrollY>30));
+  document.getElementById('menu-toggle').addEventListener('click',()=>document.getElementById('main-nav').classList.toggle('open'));
+</script>
 </body>
 </html>

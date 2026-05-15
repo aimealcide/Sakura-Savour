@@ -1,37 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Logistics Company</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sakura KGL — Your Ideal Partner</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Top-Right Corner Links -->
-    <div class="top-right-nav">
-        <a href="about.html">About Us</a>
-        <a href="contact.html">Contact Us</a>
+
+<!-- ─── Topbar ─── -->
+<header class="topbar" id="topbar">
+  <a href="index.html" class="topbar-logo">
+    <div class="logo-icon">S</div>
+    <div class="logo-text">Sakura <span>KGL</span></div>
+  </a>
+  <nav>
+    <ul class="topbar-nav" id="main-nav">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="logistics.html">Freight Logistics</a></li>
+      <li><a href="counseling.html">Business Advisory</a></li>
+      <li><a href="canteen.html">Canteen Mgmt</a></li>
+      <li><a href="about.html">About Us</a></li>
+    </ul>
+  </nav>
+  <div class="topbar-actions" id="topbar-actions">
+    <a href="contact.html" class="btn-ghost">Contact</a>
+    <a href="contact.html#booking" class="btn-primary">📅 Book a Meeting</a>
+  </div>
+  <button class="menu-toggle" id="menu-toggle" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- ─── Hero ─── -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-left">
+      <div class="hero-eyebrow">Kigali · Rwanda · Est. 2024</div>
+      <h1 class="hero-title">
+        Delivering <em>Excellence</em> Across Every Sector
+      </h1>
+      <p class="hero-desc">
+        Sakura KGL is Rwanda's trusted partner for Freight Logistics, Business Advisory, and Professional Canteen Management. We move your business forward — seamlessly.
+      </p>
+      <div class="hero-cta">
+        <a href="logistics.html" class="btn-hero-primary">Explore Our Services →</a>
+        <a href="contact.html#booking" class="btn-hero-outline">Schedule a Meeting</a>
+      </div>
     </div>
+    <div class="hero-stats">
+      <div class="stat-card">
+        <div class="stat-number">8+</div>
+        <div class="stat-label">Logistics Services</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">3</div>
+        <div class="stat-label">Business Divisions</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">100%</div>
+        <div class="stat-label">Client Focused</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">KGL</div>
+        <div class="stat-label">Kigali Based</div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <header>
-        <h1>Welcome to Sakura Company</h1>
-    </header>
+<!-- ─── Services Overview ─── -->
+<div class="section">
+  <div class="section-label">What We Do</div>
+  <h2 class="section-title">Three Pillars of Expertise</h2>
+  <p class="section-subtitle">From global freight to business strategy and daily canteen operations — Sakura KGL delivers professional results across every division.</p>
 
-    <!-- Main Navigation Section -->
-    <main class="main-options">
-        <div class="option">
-            <a href="logistics.html">Freight Logistics</a>
-        </div>
-        </div>
-        <div class="option">
-            <a href="counseling.html">Business Advisory</a>
-        </div>
-        <div class="option">
-            <a href="restaurant.html">Resto - Bar & Canteen Managment</a>
-    </main>
+  <div class="cards-grid">
+    <a href="logistics.html" class="card" style="text-decoration:none;">
+      <div class="card-icon">🚢</div>
+      <h3>Freight Logistics</h3>
+      <p>End-to-end supply chain management including cargo handling, customs clearance, warehousing, airfreight, seafreight, and inland transportation across Rwanda and beyond.</p>
+      <br><span style="font-size:0.85rem;color:var(--green-600);font-weight:600;">Learn More →</span>
+    </a>
+    <a href="counseling.html" class="card" style="text-decoration:none;">
+      <div class="card-icon">📊</div>
+      <h3>Business Advisory</h3>
+      <p>Expert strategic guidance to optimize your logistics operations, develop supply chain strategies, and streamline your business for peak efficiency and profitability.</p>
+      <br><span style="font-size:0.85rem;color:var(--green-600);font-weight:600;">Learn More →</span>
+    </a>
+    <a href="canteen.html" class="card" style="text-decoration:none;">
+      <div class="card-icon">🍽️</div>
+      <h3>Canteen Management</h3>
+      <p>Professional canteen and food service management for businesses, institutions, and events across Kigali and all of Rwanda — with local and international cuisine.</p>
+      <br><span style="font-size:0.85rem;color:var(--green-600);font-weight:600;">Learn More →</span>
+    </a>
+  </div>
+</div>
 
-    <footer>
-        <p>&copy; Sakura KGL Company. All Rights Reserved.</p>
-    </footer>
+<!-- ─── Why Choose Us ─── -->
+<div class="section-full">
+  <div class="section">
+    <div class="two-col">
+      <div>
+        <div class="section-label">Why Sakura KGL</div>
+        <h2 class="section-title">Built on Trust, Driven by Results</h2>
+        <p class="section-subtitle">"Don't tell me how good you make it; tell me how good it makes me when I use it." — Michael LeBoeuf, Ph.D</p>
+        <ul class="feature-list">
+          <li>Dedicated team with deep industry expertise</li>
+          <li>Tailored solutions — no one-size-fits-all approach</li>
+          <li>Transparent communication at every stage</li>
+          <li>Competitive pricing without compromising quality</li>
+          <li>Full accountability from contract to delivery</li>
+          <li>Rwanda-focused with global logistics reach</li>
+        </ul>
+      </div>
+      <div class="accent-panel">
+        <div class="section-label">Our Mission</div>
+        <h2 class="section-title" style="font-size:1.7rem;">To Meet & Exceed Every Client Expectation</h2>
+        <p class="section-subtitle">We foster satisfaction that builds loyalty and helps us grow together — because your success is our benchmark.</p>
+        <br>
+        <a href="contact.html#booking" class="btn-hero-primary" style="display:inline-flex;">📅 Book a Meeting with Our MD</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── Core Values ─── -->
+<div class="section">
+  <div class="section-label">Our Foundation</div>
+  <h2 class="section-title">Core Values</h2>
+  <div class="value-cards">
+    <div class="value-card"><span class="v-icon">🤝</span><h3>Integrity</h3><p>Honest and transparent in all our dealings</p></div>
+    <div class="value-card"><span class="v-icon">🔒</span><h3>Reliability</h3><p>Consistent performance you can count on</p></div>
+    <div class="value-card"><span class="v-icon">⭐</span><h3>Professionalism</h3><p>World-class service standards every time</p></div>
+    <div class="value-card"><span class="v-icon">💡</span><h3>Innovation</h3><p>Modern solutions for modern challenges</p></div>
+    <div class="value-card"><span class="v-icon">🎯</span><h3>Client Focus</h3><p>Your goals are our primary objective</p></div>
+  </div>
+</div>
+
+<!-- ─── CTA Banner ─── -->
+<div style="padding:0 3rem 6rem;max-width:1200px;margin:0 auto;">
+  <div class="banner-cta">
+    <div class="section-label" style="justify-content:center;color:var(--gold-light);">
+      <span style="width:20px;height:2px;background:var(--gold-light);display:inline-block;border-radius:2px;"></span>
+      Ready to Start?
+    </div>
+    <h2>Schedule a Meeting with Our Managing Director</h2>
+    <p>Whether you need logistics solutions, business advisory, or canteen management — let's talk. We're ready to build something great together.</p>
+    <a href="contact.html#booking" class="btn-hero-primary">📅 Book Your Meeting Today</a>
+  </div>
+</div>
+
+<!-- ─── Footer ─── -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <span class="logo-text">Sakura <span>KGL</span></span>
+      <span class="tagline">Your Ideal Type</span>
+      <p>Rwanda's trusted partner for logistics, business advisory, and professional canteen management. Headquartered in Kigali.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="logistics.html">Freight Logistics</a></li>
+        <li><a href="counseling.html">Business Advisory</a></li>
+        <li><a href="canteen.html">Canteen Management</a></li>
+        <li><a href="contact.html#booking">Book a Meeting</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="mailto:sakurakgltd@gmail.com">sakurakgltd@gmail.com</a></li>
+        <li><a href="tel:+250788688137">+250 788 688 137</a></li>
+        <li><a href="mailto:claire.benihirwe@gmail.com">claire.benihirwe@gmail.com</a></li>
+        <li><a href="tel:+250788501317">+250 788 501 317</a></li>
+        <li><span>Kacyiru KG 5 Ave 36, Kigali</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Sakura KGL Company Ltd. All Rights Reserved.</span>
+    <span>Kigali, Rwanda</span>
+  </div>
+</footer>
+
+<script>
+  // Topbar scroll effect
+  window.addEventListener('scroll', () => {
+    document.getElementById('topbar').classList.toggle('scrolled', window.scrollY > 30);
+  });
+  // Mobile menu
+  document.getElementById('menu-toggle').addEventListener('click', () => {
+    document.getElementById('main-nav').classList.toggle('open');
+  });
+</script>
 </body>
 </html>

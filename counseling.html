@@ -1,52 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Counseling Services</title>
-    <link rel="stylesheet" href="counseling-style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Business Advisory — Sakura KGL</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!--Top Right Corner Links-->
-    <div class="top-right-nav">
-        <a href="about.html">About Us</a>
-        <a href="contact.html">Contact Us</a>
+
+<header class="topbar" id="topbar">
+  <a href="index.html" class="topbar-logo">
+    <div class="logo-icon">S</div>
+    <div class="logo-text">Sakura <span>KGL</span></div>
+  </a>
+  <nav>
+    <ul class="topbar-nav" id="main-nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="logistics.html">Freight Logistics</a></li>
+      <li><a href="counseling.html" class="active">Business Advisory</a></li>
+      <li><a href="canteen.html">Canteen Mgmt</a></li>
+      <li><a href="about.html">About Us</a></li>
+    </ul>
+  </nav>
+  <div class="topbar-actions">
+    <a href="contact.html" class="btn-ghost">Contact</a>
+    <a href="contact.html#booking" class="btn-primary">📅 Book a Meeting</a>
+  </div>
+  <button class="menu-toggle" id="menu-toggle"><span></span><span></span><span></span></button>
+</header>
+
+<div class="page-hero">
+  <div class="section-label">Expert Guidance</div>
+  <h1>Business Advisory Services</h1>
+  <p>Strategic insight and operational expertise to help your business thrive in a competitive landscape.</p>
+  <div class="breadcrumb"><a href="index.html">Home</a> › <span>Business Advisory</span></div>
+</div>
+
+<!-- Overview -->
+<div class="section">
+  <div class="two-col">
+    <div>
+      <div class="section-label">What We Do</div>
+      <h2 class="section-title">Helping You Optimize Operations & Strategy</h2>
+      <p class="section-subtitle">Our advisory services are designed to help businesses improve their logistics and supply chain management. We provide expert advice and customized strategies to enhance efficiency and reduce costs.</p>
+      <a href="contact.html#booking" class="btn-primary" style="font-size:0.95rem;padding:0.75rem 1.8rem;border-radius:8px;">📅 Book a Consultation</a>
     </div>
-    
-    <header>
-        <h1>Business Advisory Services</h1>
-        <p>Helping You Optimize Your Logistics Operations</p>
-    </header>
-    
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="#overview">Overview</a>
-        <a href="#services">Our Counseling Services</a>
-    </nav>
+    <div style="display:flex;flex-direction:column;gap:1.2rem;">
+      <div class="card" style="padding:1.5rem;">
+        <div style="display:flex;gap:1rem;align-items:flex-start;">
+          <div class="card-icon" style="min-width:44px;height:44px;flex-shrink:0;">🔍</div>
+          <div>
+            <h3 style="margin-bottom:0.3rem;font-size:1.05rem;">Logistics Process Analysis</h3>
+            <p style="font-size:0.88rem;">Deep-dive assessment of your current logistics workflows to identify inefficiencies and improvement opportunities.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card" style="padding:1.5rem;">
+        <div style="display:flex;gap:1rem;align-items:flex-start;">
+          <div class="card-icon" style="min-width:44px;height:44px;flex-shrink:0;">🗺️</div>
+          <div>
+            <h3 style="margin-bottom:0.3rem;font-size:1.05rem;">Supply Chain Strategy</h3>
+            <p style="font-size:0.88rem;">Custom supply chain roadmaps designed to align your operations with your business growth objectives.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card" style="padding:1.5rem;">
+        <div style="display:flex;gap:1rem;align-items:flex-start;">
+          <div class="card-icon" style="min-width:44px;height:44px;flex-shrink:0;">📦</div>
+          <div>
+            <h3 style="margin-bottom:0.3rem;font-size:1.05rem;">Inventory Optimization</h3>
+            <p style="font-size:0.88rem;">Data-driven approaches to reduce excess stock, improve turnover, and minimize carrying costs.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-    <section id="overview">
-        <h2>Overview</h2>
-        <p>
-            Our counseling services are designed to help businesses improve their logistics and supply chain management. 
-            We provide expert advice and customized strategies to enhance efficiency and reduce costs.
-        </p>
-    </section>
+<!-- Services List -->
+<div class="section-full">
+  <div class="section">
+    <div class="section-label">Our Advisory Services</div>
+    <h2 class="section-title">Comprehensive Support for Your Business</h2>
+    <div class="cards-grid">
+      <div class="card">
+        <div class="card-icon">🔍</div>
+        <h3>Logistics Process Analysis</h3>
+        <p>We audit your existing logistics infrastructure and workflows, identifying bottlenecks, redundancies, and hidden costs that are holding your business back.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🗺️</div>
+        <h3>Supply Chain Strategy Development</h3>
+        <p>Building a resilient and agile supply chain strategy tailored to your industry, market position, and future growth plans.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">📊</div>
+        <h3>Inventory Optimization</h3>
+        <p>Reducing surplus, improving replenishment cycles, and deploying best-practice inventory management to free up working capital.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">👥</div>
+        <h3>Workforce Training & Support</h3>
+        <p>Empowering your teams with the knowledge, skills, and tools needed to execute your logistics and supply chain strategy effectively.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">⚠️</div>
+        <h3>Risk Assessment & Mitigation</h3>
+        <p>Identifying vulnerabilities in your supply chain and implementing robust contingency plans to protect business continuity.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">📈</div>
+        <h3>Performance Benchmarking</h3>
+        <p>Setting measurable KPIs and continuous monitoring frameworks to track improvement and hold operations accountable.</p>
+      </div>
+    </div>
+  </div>
+</div>
 
-    <section id="services">
-        <h2>Our Counseling Services</h2>
-        <ul>
-            <li>Logistics Process Analysis</li>
-            <li>Supply Chain Strategy Development</li>
-            <li>Inventory Optimization</li>
-            <li>Workforce Training and Support</li>
-            <li>Risk Assessment and Mitigation</li>
-        </ul>
-    </section>
+<!-- CTA -->
+<div style="padding:5rem 3rem;max-width:1200px;margin:0 auto;">
+  <div class="accent-panel" style="text-align:center;">
+    <div class="section-label" style="justify-content:center;">Take the First Step</div>
+    <h2 class="section-title">Ready to Transform Your Business Operations?</h2>
+    <p class="section-subtitle" style="max-width:550px;margin:0 auto 2rem;">Schedule a one-on-one consultation with our Managing Director and get a personalised advisory roadmap for your business.</p>
+    <a href="contact.html#booking" class="btn-hero-primary">📅 Book a Strategy Session</a>
+  </div>
+</div>
 
-    <footer>
-        <p>Email: claire.benihirwe@gmail.com</p>
-        <p>Phone: +250 788 501 317</p>
-        <p>&copy; Sakura KGL Company. All Rights Reserved.</p>
-    </footer>
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <span class="logo-text">Sakura <span>KGL</span></span>
+      <span class="tagline">Your Ideal Type</span>
+      <p>Rwanda's trusted partner for logistics, business advisory, and canteen management.</p>
+    </div>
+    <div class="footer-col"><h4>Services</h4><ul>
+      <li><a href="logistics.html">Freight Logistics</a></li>
+      <li><a href="counseling.html">Business Advisory</a></li>
+      <li><a href="canteen.html">Canteen Management</a></li>
+      <li><a href="contact.html#booking">Book a Meeting</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Company</h4><ul>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul>
+      <li><a href="mailto:sakurakgltd@gmail.com">sakurakgltd@gmail.com</a></li>
+      <li><a href="tel:+250788688137">+250 788 688 137</a></li>
+      <li><span>Kacyiru KG 5 Ave 36, Kigali</span></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Sakura KGL Company Ltd. All Rights Reserved.</span>
+    <span>Kigali, Rwanda</span>
+  </div>
+</footer>
+<script>
+  window.addEventListener('scroll',()=>document.getElementById('topbar').classList.toggle('scrolled',scrollY>30));
+  document.getElementById('menu-toggle').addEventListener('click',()=>document.getElementById('main-nav').classList.toggle('open'));
+</script>
 </body>
 </html>
