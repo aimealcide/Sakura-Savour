@@ -130,7 +130,6 @@
           <label for="c-message">Message *</label>
           <textarea id="c-message" name="message" rows="4" placeholder="Tell us how we can help..." required></textarea>
         </div>
-        <div class="g-recaptcha" data-sitekey="6LeLwEwrAAAAAPEL8UR6Adx5M-IAulevybAEZMZI" style="margin-bottom:0.5rem;"></div>
         <button type="submit" class="form-submit">✉️ Send Message</button>
       </form>
     </div>
@@ -301,7 +300,7 @@
       this.reset(); if(typeof grecaptcha!=='undefined') grecaptcha.reset();
       alertEl.className='alert success'; alertEl.textContent='✅ Message sent! We\'ll be in touch soon.';
     } else {
-      alertEl.className='alert error'; alertEl.textContent='❌ Failed to send. Please try again or email us directly.';
+      alertEl.className='alert error'; alertEl.textContent='❌ Failed to send. Please try again or email us directly on info@sakurakgl.rw.';
     }
     btn.textContent='✉️ Send Message'; btn.disabled=false;
     alertEl.scrollIntoView({behavior:'smooth',block:'center'});
