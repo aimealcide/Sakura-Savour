@@ -1,237 +1,252 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Sakura KGL — freight logistics and business advisory in Kigali, Rwanda.">
   <title>Sakura KGL | Freight Logistics & Business Advisory, Kigali</title>
+  <link rel="icon" href="assets/favicon.png" type="image/png">
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="page-index">
-  <div class="page-video-wrap">
-    <video class="bg-video" autoplay muted loop playsinline preload="metadata" poster="assets/bg-freight-poster.jpg">
-      <source src="assets/bg-freight.mp4" type="video/mp4">
-    </video>
-  </div>
+<body class="page-home">
 
-<!-- ─── Topbar ─── -->
-<header class="topbar" id="topbar">
-  <a href="index.html" class="topbar-logo">
-    <div class="logo-icon">S</div>
-    <div class="logo-text">Sakura <span>KGL</span></div>
-  </a>
-  <nav>
-    <ul class="topbar-nav" id="main-nav">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="logistics.html">Freight Logistics</a></li>
-      <li><a href="counseling.html">Business Advisory</a></li>
-      <li><a href="about.html">About Us</a></li>
-    </ul>
-  </nav>
-  <div class="topbar-actions" id="topbar-actions">
-    <a href="contact.html" class="btn-ghost">Contact</a>
-    <a href="contact.html#booking" class="btn-primary">Book a Meeting</a>
+<header class="site-header" id="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="Sakura KGL home">
+      <img src="assets/sakura-mark-light.png" alt="Sakura KGL logo">
+      <span class="brand-wordmark">SAKURA <span>KGL</span></span>
+    </a>
+    <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+      <a href="index.html" class="active">Home</a>
+      <a href="logistics.html" class="">Freight Logistics</a>
+      <a href="counseling.html" class="">Business Advisory</a>
+      <a href="about.html" class="">About</a>
+      <a href="index.html#insights">Insights</a>
+    </nav>
+    <div class="header-actions">
+      <a class="btn btn-outline" href="contact.html">Contact</a>
+      <a class="btn btn-gold" href="contact.html#booking">Book a Consultation <span>→</span></a>
+    </div>
+    <button class="menu-toggle" type="button" aria-label="Open menu" aria-controls="site-nav" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </div>
-  <button class="menu-toggle" id="menu-toggle" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
 </header>
 
-<!-- ─── Hero ─── -->
-<section class="hero">
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <div class="hero-left">
-      <div class="hero-eyebrow">Kigali · Rwanda · Est. 2024</div>
-      <h1 class="hero-title">
-        Logistics & advisory that work for your business
-      </h1>
-      <p class="hero-desc">
-        Based in Kigali, we help businesses move goods and solve logistics challenges, practically and reliably.
-      </p>
-      <div class="hero-cta">
-        <a href="logistics.html" class="btn-hero-primary">Explore Our Services →</a>
-        <a href="contact.html#booking" class="btn-hero-outline">Schedule a Meeting</a>
+
+<main>
+  <section class="hero">
+    <div class="hero-media" aria-hidden="true">
+      <video autoplay muted loop playsinline poster="assets/bg-freight-poster.jpg">
+        <source src="assets/bg-freight.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="container hero-content">
+      <div class="hero-grid">
+        <div>
+          <div class="eyebrow reveal">Kigali · Rwanda · East Africa</div>
+          <h1 class="reveal delay-1">Moving Business <em>Forward.</em><br>From Rwanda to the World.</h1>
+          <p class="lead reveal delay-2">Freight logistics and strategic business advisory built around the way your business actually operates.</p>
+          <div class="hero-actions reveal delay-3">
+            <a class="btn btn-gold" href="logistics.html">Explore Freight Logistics <span>→</span></a>
+            <a class="btn btn-outline" href="contact.html#booking">Talk to an Advisor <span>→</span></a>
+          </div>
+        </div>
+        <div class="hero-proof reveal delay-3">
+          <strong>Licensed & Insured · Kigali Based · Global Freight Network</strong>
+          <span>Practical support, clear communication and direct access to the people managing your work.</span>
+        </div>
       </div>
     </div>
-    <div class="hero-stats">
-      <div class="stat-card">
-        <div class="stat-number">8+</div>
-        <div class="stat-label">Logistics Services</div>
+  </section>
+
+  <section class="metrics" aria-label="Sakura KGL at a glance">
+    <div class="container metrics-grid">
+      <div class="metric reveal"><div class="metric-number" data-count="8" data-suffix="+">0+</div><div class="metric-label">Logistics Services</div></div>
+      <div class="metric reveal delay-1"><div class="metric-number" data-count="2">0</div><div class="metric-label">Core Business Divisions</div></div>
+      <div class="metric reveal delay-2"><div class="metric-number" data-count="100" data-suffix="%">0%</div><div class="metric-label">Client Focus</div></div>
+      <div class="metric reveal delay-3"><div class="metric-number">KGL</div><div class="metric-label">Kigali Headquarters</div></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head center reveal">
+        <div class="kicker">Two Pillars of Expertise</div>
+        <h2 class="title">One partner for movement and better decisions.</h2>
+        <p class="lead">From moving cargo to improving the systems behind it, Sakura KGL keeps its approach practical, human and accountable.</p>
       </div>
-      <div class="stat-card">
-        <div class="stat-number">2</div>
-        <div class="stat-label">Business Divisions</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-number">100%</div>
-        <div class="stat-label">Client Focused</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-number">KGL</div>
-        <div class="stat-label">Kigali Based</div>
+      <div class="pillars reveal">
+        <a class="pillar" href="logistics.html" style="background-image:url('assets/bg-freight-poster.jpg')">
+          <div class="pillar-content">
+            <div class="pillar-num">01 / Freight Logistics</div>
+            <h3>Move cargo with confidence.</h3>
+            <p>End-to-end support across cargo handling, customs clearance, warehousing, air and sea freight, packaging and inland transportation.</p>
+            <span class="btn-link">Explore Logistics <span>→</span></span>
+          </div>
+        </a>
+        <a class="pillar" href="counseling.html" style="background-image:url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1400&q=85')">
+          <div class="pillar-content">
+            <div class="pillar-num">02 / Business Advisory</div>
+            <h3>Turn operational challenges into growth.</h3>
+            <p>Practical guidance for logistics processes, supply chain strategy, inventory, workforce capability, risk and performance.</p>
+            <span class="btn-link">Explore Advisory <span>→</span></span>
+          </div>
+        </a>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ─── Trust Strip ─── -->
-<div class="trust-strip">
-  <span>✓ Licensed & Insured</span>
-  <span>✓ Kigali-Based, Nationwide Reach</span>
-  <span>✓ Global Freight Network</span>
-  <span>✓ Direct MD Access</span>
-</div>
+  <section class="section section--cream">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="kicker">Freight Logistics</div>
+        <h2 class="title">The essentials, handled properly.</h2>
+        <p class="lead">A clear service overview for businesses planning shipments, storage, customs and inland movement.</p>
+      </div>
+      <div class="service-grid">
+        <article class="service-card reveal"><div class="service-index">01</div><div class="service-icon">✈</div><h3>Air Freight</h3><p>Fast international cargo movement coordinated around your requirements.</p><a class="btn-link" href="logistics.html">Learn More <span>→</span></a></article>
+        <article class="service-card reveal delay-1"><div class="service-index">02</div><div class="service-icon">◉</div><h3>Sea Freight</h3><p>Cost-effective global shipping support for planned cargo movement.</p><a class="btn-link" href="logistics.html">Learn More <span>→</span></a></article>
+        <article class="service-card reveal delay-2"><div class="service-index">03</div><div class="service-icon">⌁</div><h3>Customs Clearance</h3><p>Practical documentation and clearance support to keep shipments moving.</p><a class="btn-link" href="logistics.html">Learn More <span>→</span></a></article>
+        <article class="service-card reveal"><div class="service-index">04</div><div class="service-icon">▦</div><h3>Warehousing</h3><p>Secure, organized storage and inventory handling for your goods.</p><a class="btn-link" href="logistics.html">Learn More <span>→</span></a></article>
+        <article class="service-card reveal delay-1"><div class="service-index">05</div><div class="service-icon">↗</div><h3>Inland Transportation</h3><p>Reliable road movement throughout Rwanda and the East African region.</p><a class="btn-link" href="logistics.html">Learn More <span>→</span></a></article>
+        <article class="service-card reveal delay-2"><div class="service-index">06</div><div class="service-icon">□</div><h3>Cargo Handling</h3><p>Professional coordination from arrival and loading through final delivery.</p><a class="btn-link" href="logistics.html">Learn More <span>→</span></a></article>
+      </div>
+    </div>
+  </section>
 
-<!-- ─── Services Overview ─── -->
-<div class="section">
-  <div class="section-label">What We Do</div>
-  <h2 class="section-title">Two Pillars of Expertise</h2>
-  <p class="section-subtitle">From global freight movement to business strategy, Sakura KGL provides practical services across both divisions.</p>
+  <section class="section map-section">
+    <div class="container map-layout">
+      <div class="map-copy reveal">
+        <div class="kicker">Where We Operate</div>
+        <h2 class="title">From Kigali to global markets.</h2>
+        <p class="lead">Sakura KGL is rooted in Kigali and positioned around wider logistics routes, connecting local business needs with regional and international freight movement.</p>
+        <div class="map-tags"><span>Rwanda</span><span>East Africa</span><span>Regional Freight</span><span>International Freight</span></div>
+      </div>
+      <div class="route-map reveal delay-1" aria-label="Stylized route from Kigali through East Africa to global markets">
+        <svg class="africa-outline" viewBox="0 0 300 360" aria-hidden="true">
+          <path d="M154 25 C125 41 119 72 127 99 C116 120 119 147 103 169 C91 187 94 213 111 227 C116 245 107 264 119 281 C132 301 126 323 143 337 C162 326 176 310 178 290 C189 272 209 256 202 235 C195 218 207 200 199 181 C189 160 198 143 185 126 C175 110 181 88 168 70 C166 50 166 35 154 25Z"/>
+        </svg>
+        <div class="route"></div><div class="route-pulse"></div>
+        <div class="map-label kigali">Kigali<small>Rwanda</small></div>
+        <div class="map-label east">East Africa<small>Regional routes</small></div>
+        <div class="map-label global">Global<small>International freight</small></div>
+      </div>
+    </div>
+  </section>
 
-  <div class="pillar-grid">
-    <a href="logistics.html" class="pillar-card" style="background-image:linear-gradient(180deg, rgba(7,26,13,0.15) 0%, rgba(7,26,13,0.92) 100%), url('https://images.unsplash.com/photo-1494412651409-8963ce7935a7?auto=format&fit=crop&w=1200&q=80');">
-      <div class="pillar-tag">Division 01</div>
-      <h3>Freight Logistics</h3>
-      <p>End-to-end supply chain management including cargo handling, customs clearance, warehousing, airfreight, seafreight, and inland transportation across Rwanda and beyond.</p>
-      <span class="pillar-link">Explore Freight Logistics →</span>
-    </a>
-    <a href="counseling.html" class="pillar-card" style="background-image:linear-gradient(180deg, rgba(7,26,13,0.15) 0%, rgba(7,26,13,0.92) 100%), url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1200&q=80');">
-      <div class="pillar-tag">Division 02</div>
-      <h3>Business Advisory</h3>
-      <p>Expert strategic guidance to optimize your logistics operations, develop supply chain strategies, and streamline your business for peak efficiency and profitability.</p>
-      <span class="pillar-link">Explore Business Advisory →</span>
-    </a>
-  </div>
-</div>
+  <section class="section">
+    <div class="container">
+      <div class="section-head center reveal">
+        <div class="kicker">Why Sakura KGL</div>
+        <h2 class="title">Why businesses choose Sakura.</h2>
+        <p class="lead">The existing Sakura approach is simple: know the work, tailor the solution, communicate clearly and stay accountable.</p>
+      </div>
+      <div class="trust-grid">
+        <article class="trust-item reveal"><div class="trust-num">01</div><h3>Industry Expertise</h3><p>We understand the work from the ground up.</p></article>
+        <article class="trust-item reveal delay-1"><div class="trust-num">02</div><h3>Tailored Solutions</h3><p>No fixed packages. Solutions built around your business.</p></article>
+        <article class="trust-item reveal delay-2"><div class="trust-num">03</div><h3>Clear Communication</h3><p>You always know where things stand.</p></article>
+        <article class="trust-item reveal delay-3"><div class="trust-num">04</div><h3>End-to-End Accountability</h3><p>One team from first conversation to final delivery.</p></article>
+      </div>
+    </div>
+  </section>
 
-<!-- ─── Why Choose Us ─── -->
-<div class="section-full">
-  <div class="section">
-    <div class="two-col">
-      <div>
-        <div class="section-label">Why Sakura KGL</div>
-        <h2 class="section-title">Built on Trust, Driven by Results</h2>
-        <p class="section-subtitle">We're a small, hands-on team, so when you call, you talk to someone who actually knows your shipment or your file. That's the difference we try to make.</p>
-        <ul class="feature-list">
-          <li>A team that knows the industry from the ground up</li>
-          <li>Solutions built around your business, not a fixed package</li>
-          <li>Clear communication so you always know where things stand</li>
-          <li>Fair pricing without cutting corners on quality</li>
-          <li>Full accountability from the first call to final delivery</li>
-          <li>Rooted in Rwanda, connected to global logistics routes</li>
+  <section class="section section--dark">
+    <div class="container">
+      <div class="section-head center reveal">
+        <div class="kicker">How We Work</div>
+        <h2 class="title">A clear process from problem to outcome.</h2>
+        <p class="lead">Straight talk, practical planning and visible progress at every stage.</p>
+      </div>
+      <div class="process">
+        <article class="process-step reveal"><span class="process-no">01</span><h3>Understand</h3><p>Tell us what you're trying to move or solve.</p></article>
+        <article class="process-step reveal delay-1"><span class="process-no">02</span><h3>Assess</h3><p>We evaluate your logistics or operational challenge.</p></article>
+        <article class="process-step reveal delay-2"><span class="process-no">03</span><h3>Plan</h3><p>We develop the most practical approach.</p></article>
+        <article class="process-step reveal delay-3"><span class="process-no">04</span><h3>Execute</h3><p>Our team manages the work.</p></article>
+        <article class="process-step reveal delay-4"><span class="process-no">05</span><h3>Deliver</h3><p>You get clear communication and measurable results.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="insights">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="kicker">Sakura Insights</div>
+        <h2 class="title">Practical thinking for businesses that move.</h2>
+        <p class="lead">A future-ready space for logistics and operational guidance. The topics below are designed as editorial starting points rather than unsupported claims about specific regulations or routes.</p>
+      </div>
+      <div class="insights">
+        <article class="insight-card reveal"><div class="insight-tag">Importing into Rwanda</div><h3>5 Things Businesses Should Know Before Importing Into Rwanda</h3><p>Plan documentation, timelines, cargo requirements and communication before the shipment moves.</p><a class="btn-link" href="contact.html?topic=Importing%20into%20Rwanda">Discuss This Topic <span>→</span></a></article>
+        <article class="insight-card reveal delay-1"><div class="insight-tag">Freight Strategy</div><h3>How to Reduce International Shipping Costs</h3><p>Start by understanding the shipment, service level, timing and total logistics cost—not just the headline freight rate.</p><a class="btn-link" href="contact.html?topic=Shipping%20Costs">Discuss This Topic <span>→</span></a></article>
+        <article class="insight-card reveal delay-2"><div class="insight-tag">Freight Choice</div><h3>Air Freight vs Sea Freight: Which Is Right for Your Business?</h3><p>Compare urgency, cargo profile, budget and planning horizon before choosing the transport mode.</p><a class="btn-link" href="contact.html?topic=Air%20vs%20Sea%20Freight">Discuss This Topic <span>→</span></a></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="cta reveal">
+        <div class="cta-content">
+          <div class="kicker">Let's solve the next challenge</div>
+          <h2>Have a shipment to move or a business challenge to solve?</h2>
+          <p>Talk to Sakura KGL about your logistics requirements or arrange a focused advisory conversation.</p>
+        </div>
+        <div class="cta-actions">
+          <a class="btn btn-gold" href="contact.html">Talk to Sakura KGL <span>→</span></a>
+          <a class="btn btn-outline" href="contact.html#booking">Book a Consultation</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="index.html" aria-label="Sakura KGL home">
+          <img src="assets/sakura-mark-light.png" alt="Sakura KGL logo">
+          <span class="brand-wordmark">SAKURA <span>KGL</span></span>
+        </a>
+        <span class="footer-tagline">Freight logistics & business advisory</span>
+        <p>Kigali-based, hands-on support for businesses that need their goods and operations to keep moving.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="logistics.html">Freight Logistics</a></li>
+          <li><a href="counseling.html">Business Advisory</a></li>
+          <li><a href="contact.html#booking">Book a Consultation</a></li>
         </ul>
       </div>
-      <div class="accent-panel">
-        <div class="section-label">Our Mission</div>
-        <h2 class="section-title" style="font-size:1.7rem;">To meet client needs and deliver clear results</h2>
-        <p class="section-subtitle">We focus on practical work that helps your business run smoother and grow where it matters.</p>
-        <br>
-        <a href="contact.html#booking" class="btn-hero-primary" style="display:inline-flex;">Book a Meeting with Our MD</a>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="index.html#insights">Insights</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="mailto:info@sakurakgl.rw">info@sakurakgl.rw</a></li>
+          <li><a href="tel:+250788688137">+250 788 688 137</a></li>
+          <li><a href="mailto:claire.benihirwe@gmail.com">claire.benihirwe@gmail.com</a></li>
+          <li><a href="tel:+250788501317">+250 788 501 317</a></li>
+          <li><span>Rwandex KN 3 Rd, Kigali, Rwanda</span></li>
+        </ul>
       </div>
     </div>
-  </div>
-</div>
-
-<!-- ─── Core Values ─── -->
-<div class="section">
-  <div class="section-label">How We Work</div>
-  <h2 class="section-title">What You Can Expect From Us</h2>
-  <div class="value-cards">
-    <div class="value-card"><span class="v-icon">🤝</span><h3>Straight talk</h3><p>We tell you the real timeline and the real cost, even when it's not what you want to hear.</p></div>
-    <div class="value-card"><span class="v-icon">🔒</span><h3>We show up</h3><p>If we say Tuesday, it's Tuesday. Your shipment or your meeting isn't an afterthought.</p></div>
-    <div class="value-card"><span class="v-icon">⭐</span><h3>We know the work</h3><p>Years spent in Kigali's ports, warehouses, and boardrooms, not just in theory.</p></div>
-    <div class="value-card"><span class="v-icon">🎯</span><h3>Your problem first</h3><p>We start by understanding what's actually slowing you down, not by pitching a package.</p></div>
-  </div>
-</div>
-
-<!-- ─── CTA Banner ─── -->
-<div style="padding:0 3rem 6rem;max-width:1200px;margin:0 auto;">
-  <div class="banner-cta">
-    <div class="section-label" style="justify-content:center;color:var(--gold-light);">
-      <span style="width:20px;height:2px;background:var(--gold-light);display:inline-block;border-radius:2px;"></span>
-      Ready to Start?
+    <div class="footer-bottom">
+      <span>© <span data-year>2026</span> Sakura KGL Company Ltd. All Rights Reserved.</span>
+      <span>Kigali · Rwanda</span>
     </div>
-    <h2>Schedule a Meeting with Our Managing Director</h2>
-    <p>Whether you need logistics solutions or business advisory, get in touch. We're happy to talk through what you need.</p>
-    <a href="contact.html#booking" class="btn-hero-primary">Book Your Meeting Today</a>
-  </div>
-</div>
-
-<!-- ─── Footer ─── -->
-<footer class="footer">
-  <div class="footer-grid">
-    <div class="footer-brand">
-      <span class="logo-text">Sakura <span>KGL</span></span>
-      <span class="tagline">Kigali-based logistics & advisory</span>
-      <p>Rwanda's trusted partner for freight logistics and business advisory. Headquartered in Kigali.</p>
-    </div>
-    <div class="footer-col">
-      <h4>Services</h4>
-      <ul>
-        <li><a href="logistics.html">Freight Logistics</a></li>
-        <li><a href="counseling.html">Business Advisory</a></li>
-        <li><a href="contact.html#booking">Book a Meeting</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Company</h4>
-      <ul>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Contact</h4>
-      <ul>
-        <li><a href="mailto:info@sakurakgl.rw">info@sakurakgl.rw</a></li>
-        <li><a href="tel:+250788688137">+250 788 688 137</a></li>
-        <li><a href="mailto:claire.benihirwe@gmail.com">claire.benihirwe@gmail.com</a></li>
-        <li><a href="tel:+250788501317">+250 788 501 317</a></li>
-        <li><span>Rwandex KN 3 Rd, Kigali</span></li>
-      </ul>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <span>© 2025 Sakura KGL Company Ltd. All Rights Reserved.</span>
-    <span>Kigali, Rwanda</span>
   </div>
 </footer>
 
-<script>
-  (function(){
-    function initUI(){
-      // safe topbar scroll
-      const topbar = document.getElementById('topbar');
-      if (topbar) window.addEventListener('scroll', ()=> topbar.classList.toggle('scrolled', window.scrollY > 30));
+<script src="script.js" defer></script>
 
-      // safe mobile menu
-      const menuToggle = document.getElementById('menu-toggle');
-      const mainNav = document.getElementById('main-nav');
-      if (menuToggle && mainNav) menuToggle.addEventListener('click', ()=> mainNav.classList.toggle('open'));
-
-      // video handling
-      const vids = Array.from(document.querySelectorAll('.bg-video'));
-      if (!vids.length) return;
-      vids.forEach(v=>{ v.addEventListener('canplay', ()=> v.classList.add('visible')); v.play().catch(()=>{}); });
-
-      if ('IntersectionObserver' in window) {
-        const io = new IntersectionObserver((entries)=>{
-          entries.forEach(e=>{
-            const v = e.target;
-            if (e.isIntersecting && e.intersectionRatio > 0.2) {
-              v.play().then(()=>v.classList.add('playing')).catch(()=>{});
-            } else {
-              v.pause(); v.classList.remove('playing');
-            }
-          });
-        }, {threshold:[0,0.2,0.5]});
-        vids.forEach(v=> io.observe(v));
-      } else {
-        vids.forEach(v=> { v.play().catch(()=>{}); v.classList.add('playing'); });
-      }
-    }
-    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initUI); else initUI();
-  })();
-</script>
 </body>
 </html>

@@ -1,195 +1,161 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Business Advisory — Sakura KGL</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Sakura KGL — freight logistics and business advisory in Kigali, Rwanda.">
+  <title>Business Advisory | Sakura KGL</title>
+  <link rel="icon" href="assets/favicon.png" type="image/png">
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="page-counseling">
-  <div class="page-video-wrap">
-    <video class="bg-video" autoplay muted loop playsinline preload="metadata" poster="assets/bg-freight-poster.jpg">
-      <source src="assets/bg-freight.mp4" type="video/mp4">
-    </video>
-  </div>
+<body class="page-advisory">
 
-<header class="topbar" id="topbar">
-  <a href="index.html" class="topbar-logo">
-    <div class="logo-icon">S</div>
-    <div class="logo-text">Sakura <span>KGL</span></div>
-  </a>
-  <nav>
-    <ul class="topbar-nav" id="main-nav">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="logistics.html">Freight Logistics</a></li>
-      <li><a href="counseling.html" class="active">Business Advisory</a></li>
-      <li><a href="about.html">About Us</a></li>
-    </ul>
-  </nav>
-  <div class="topbar-actions">
-    <a href="contact.html" class="btn-ghost">Contact</a>
-    <a href="contact.html#booking" class="btn-primary">Book a Meeting</a>
+<header class="site-header" id="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="Sakura KGL home">
+      <img src="assets/sakura-mark-light.png" alt="Sakura KGL logo">
+      <span class="brand-wordmark">SAKURA <span>KGL</span></span>
+    </a>
+    <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+      <a href="index.html" class="">Home</a>
+      <a href="logistics.html" class="">Freight Logistics</a>
+      <a href="counseling.html" class="active">Business Advisory</a>
+      <a href="about.html" class="">About</a>
+      <a href="index.html#insights">Insights</a>
+    </nav>
+    <div class="header-actions">
+      <a class="btn btn-outline" href="contact.html">Contact</a>
+      <a class="btn btn-gold" href="contact.html#booking">Book a Consultation <span>→</span></a>
+    </div>
+    <button class="menu-toggle" type="button" aria-label="Open menu" aria-controls="site-nav" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </div>
-  <button class="menu-toggle" id="menu-toggle"><span></span><span></span><span></span></button>
 </header>
 
-<div class="page-hero">
-  <div class="section-label">Expert Guidance</div>
-  <h1>Business Advisory Services</h1>
-  <p>Practical advice to improve your logistics and operations.</p>
-  <div class="breadcrumb"><a href="index.html">Home</a> › <span>Business Advisory</span></div>
-</div>
 
-<!-- Overview -->
-<div class="section">
-  <div class="two-col">
-    <div>
-      <div class="section-label">What We Do</div>
-      <h2 class="section-title">Helping You Optimize Operations & Strategy</h2>
-      <p class="section-subtitle">Our advisory services help businesses improve logistics and supply chain management with practical, tailored recommendations to cut costs and run more smoothly.</p>
-      <a href="contact.html#booking" class="btn-primary" style="font-size:0.95rem;padding:0.75rem 1.8rem;border-radius:8px;">Book a Consultation</a>
+<main>
+  <section class="page-hero">
+    <div class="container page-hero-inner">
+      <div class="kicker">Expert Guidance</div>
+      <h1>Business Advisory</h1>
+      <p>Practical advice to improve your logistics, operations and strategy.</p>
+      <div class="breadcrumb"><a href="index.html">Home</a><span>›</span><span>Business Advisory</span></div>
     </div>
-    <div style="display:flex;flex-direction:column;gap:1.2rem;">
-      <div class="card" style="padding:1.5rem;">
-        <div style="display:flex;gap:1rem;align-items:flex-start;">
-          <div class="card-icon" style="min-width:44px;height:44px;flex-shrink:0;">🔍</div>
-          <div>
-            <h3 style="margin-bottom:0.3rem;font-size:1.05rem;">Logistics Process Analysis</h3>
-            <p style="font-size:0.88rem;">Deep-dive assessment of your current logistics workflows to identify inefficiencies and improvement opportunities.</p>
-          </div>
-        </div>
+  </section>
+
+  <section class="section">
+    <div class="container page-intro">
+      <div class="reveal">
+        <div class="kicker">What We Do</div>
+        <h2 class="title">Helping you optimize operations & strategy.</h2>
+        <p class="lead">Our advisory services help businesses improve logistics and supply chain management with practical, tailored recommendations to cut costs and run more smoothly.</p>
+        <a class="btn btn-gold" href="contact.html#booking" style="margin-top:28px">Book a Consultation <span>→</span></a>
       </div>
-      <div class="card" style="padding:1.5rem;">
-        <div style="display:flex;gap:1rem;align-items:flex-start;">
-          <div class="card-icon" style="min-width:44px;height:44px;flex-shrink:0;">🗺️</div>
-          <div>
-            <h3 style="margin-bottom:0.3rem;font-size:1.05rem;">Supply Chain Strategy</h3>
-            <p style="font-size:0.88rem;">Custom supply chain roadmaps designed to align your operations with your business growth objectives.</p>
-          </div>
-        </div>
-      </div>
-      <div class="card" style="padding:1.5rem;">
-        <div style="display:flex;gap:1rem;align-items:flex-start;">
-          <div class="card-icon" style="min-width:44px;height:44px;flex-shrink:0;">📦</div>
-          <div>
-            <h3 style="margin-bottom:0.3rem;font-size:1.05rem;">Inventory Optimization</h3>
-            <p style="font-size:0.88rem;">Data-driven approaches to reduce excess stock, improve turnover, and minimize carrying costs.</p>
-          </div>
+      <div class="info-panel reveal delay-1">
+        <div class="kicker">Three Starting Points</div>
+        <div class="info-lines">
+          <div class="info-line"><b>01</b><span>Logistics Process Analysis — identify inefficiencies and opportunities.</span></div>
+          <div class="info-line"><b>02</b><span>Supply Chain Strategy — align operations with growth objectives.</span></div>
+          <div class="info-line"><b>03</b><span>Inventory Optimization — improve turnover and manage carrying costs.</span></div>
         </div>
       </div>
     </div>
-  </div>
-</div>
+  </section>
 
-<!-- Services List -->
-<div class="section-full">
-  <div class="section">
-    <div class="section-label">Our Advisory Services</div>
-    <h2 class="section-title">Comprehensive Support for Your Business</h2>
-    <div class="cards-grid">
-      <div class="card">
-        <div class="card-icon">🔍</div>
-        <h3>Logistics Process Analysis</h3>
-        <p>We audit your existing logistics infrastructure and workflows, identifying bottlenecks, redundancies, and hidden costs that are holding your business back.</p>
+  <section class="section section--cream">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="kicker">Our Advisory Services</div>
+        <h2 class="title">Comprehensive support for your business.</h2>
+        <p class="lead">Practical guidance across the operational issues that can slow a business down.</p>
       </div>
-      <div class="card">
-        <div class="card-icon">🗺️</div>
-        <h3>Supply Chain Strategy Development</h3>
-        <p>Building a resilient and agile supply chain strategy tailored to your industry, market position, and future growth plans.</p>
-      </div>
-        <div class="card">
-        <div class="card-icon">📊</div>
-        <h3>Inventory Optimization</h3>
-        <p>Reducing surplus, improving replenishment cycles, and using practical inventory management to free up working capital.</p>
-      </div>
-      <div class="card">
-        <div class="card-icon">👥</div>
-        <h3>Workforce Training & Support</h3>
-        <p>Empowering your teams with the knowledge, skills, and tools needed to execute your logistics and supply chain strategy effectively.</p>
-      </div>
-      <div class="card">
-        <div class="card-icon">⚠️</div>
-        <h3>Risk Assessment & Mitigation</h3>
-        <p>Identifying vulnerabilities in your supply chain and implementing robust contingency plans to protect business continuity.</p>
-      </div>
-      <div class="card">
-        <div class="card-icon">📈</div>
-        <h3>Performance Benchmarking</h3>
-        <p>Setting measurable KPIs and continuous monitoring frameworks to track improvement and hold operations accountable.</p>
+      <div class="service-grid">
+        <article class="service-card reveal"><div class="service-index">01</div><div class="service-icon">⌕</div><h3>Logistics Process Analysis</h3><p>Audit existing logistics infrastructure and workflows to identify bottlenecks, redundancies and hidden costs.</p></article>
+        <article class="service-card reveal delay-1"><div class="service-index">02</div><div class="service-icon">⌁</div><h3>Supply Chain Strategy Development</h3><p>Build a resilient and agile supply chain strategy tailored to industry, market position and growth plans.</p></article>
+        <article class="service-card reveal delay-2"><div class="service-index">03</div><div class="service-icon">▥</div><h3>Inventory Optimization</h3><p>Reduce surplus, improve replenishment cycles and use practical inventory management to free working capital.</p></article>
+        <article class="service-card reveal"><div class="service-index">04</div><div class="service-icon">♙</div><h3>Workforce Training & Support</h3><p>Equip teams with the knowledge, skills and tools needed to execute logistics and supply chain strategy.</p></article>
+        <article class="service-card reveal delay-1"><div class="service-index">05</div><div class="service-icon">!</div><h3>Risk Assessment & Mitigation</h3><p>Identify supply chain vulnerabilities and develop practical contingency plans for business continuity.</p></article>
+        <article class="service-card reveal delay-2"><div class="service-index">06</div><div class="service-icon">↗</div><h3>Performance Benchmarking</h3><p>Set measurable KPIs and monitoring frameworks to track improvement and strengthen accountability.</p></article>
       </div>
     </div>
-  </div>
-</div>
+  </section>
 
-<!-- CTA -->
-<div style="padding:5rem 3rem;max-width:1200px;margin:0 auto;">
-  <div class="accent-panel" style="text-align:center;">
-    <div class="section-label" style="justify-content:center;">Take the First Step</div>
-    <h2 class="section-title">Ready to Transform Your Business Operations?</h2>
-    <p class="section-subtitle" style="max-width:550px;margin:0 auto 2rem;">Schedule a one-on-one consultation with our Managing Director and get a personalised advisory roadmap for your business.</p>
-    <a href="contact.html#booking" class="btn-hero-primary">Book a Strategy Session</a>
-  </div>
-</div>
+  <section class="section">
+    <div class="container split">
+      <div class="reveal">
+        <div class="kicker">Advisory Approach</div>
+        <h2 class="title">No fixed package. Start with the problem.</h2>
+        <p class="lead">Sakura's advisory positioning is intentionally practical: understand what's slowing you down, assess the situation, plan the most workable approach, then help you move it forward.</p>
+        <div class="check-list">
+          <div class="check-item"><div class="check-mark">✓</div><div><strong>Understand the operation</strong><span>Start with the real challenge rather than a pre-set solution.</span></div></div>
+          <div class="check-item"><div class="check-mark">✓</div><div><strong>Make recommendations usable</strong><span>Focus on practical changes your team can actually implement.</span></div></div>
+          <div class="check-item"><div class="check-mark">✓</div><div><strong>Keep communication clear</strong><span>Know what is being assessed, changed and measured.</span></div></div>
+        </div>
+      </div>
+      <div class="feature-frame reveal delay-1">
+        <div class="feature-caption"><div class="kicker">Business Advisory</div><h3>Turn operational challenges into growth.</h3><p>Strategic thinking grounded in the way your business actually works.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--dark">
+    <div class="container">
+      <div class="cta reveal">
+        <div class="cta-content"><div class="kicker">Take the first step</div><h2>Ready to transform your business operations?</h2><p>Bring the challenge. We'll start by understanding it and identifying the most practical next step.</p></div>
+        <div class="cta-actions"><a class="btn btn-gold" href="contact.html#booking">Book a Strategy Session <span>→</span></a><a class="btn btn-outline" href="contact.html">Contact Us</a></div>
+      </div>
+    </div>
+  </section>
+</main>
+
 
 <footer class="footer">
-  <div class="footer-grid">
-    <div class="footer-brand">
-      <span class="logo-text">Sakura <span>KGL</span></span>
-      <span class="tagline">Kigali-based logistics & advisory</span>
-      <p>Rwanda's trusted partner for freight logistics and business advisory.</p>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="index.html" aria-label="Sakura KGL home">
+          <img src="assets/sakura-mark-light.png" alt="Sakura KGL logo">
+          <span class="brand-wordmark">SAKURA <span>KGL</span></span>
+        </a>
+        <span class="footer-tagline">Freight logistics & business advisory</span>
+        <p>Kigali-based, hands-on support for businesses that need their goods and operations to keep moving.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="logistics.html">Freight Logistics</a></li>
+          <li><a href="counseling.html">Business Advisory</a></li>
+          <li><a href="contact.html#booking">Book a Consultation</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="index.html#insights">Insights</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="mailto:info@sakurakgl.rw">info@sakurakgl.rw</a></li>
+          <li><a href="tel:+250788688137">+250 788 688 137</a></li>
+          <li><a href="mailto:claire.benihirwe@gmail.com">claire.benihirwe@gmail.com</a></li>
+          <li><a href="tel:+250788501317">+250 788 501 317</a></li>
+          <li><span>Rwandex KN 3 Rd, Kigali, Rwanda</span></li>
+        </ul>
+      </div>
     </div>
-    <div class="footer-col"><h4>Services</h4><ul>
-      <li><a href="logistics.html">Freight Logistics</a></li>
-      <li><a href="counseling.html">Business Advisory</a></li>
-      <li><a href="contact.html#booking">Book a Meeting</a></li>
-    </ul></div>
-    <div class="footer-col"><h4>Company</h4><ul>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul></div>
-    <div class="footer-col"><h4>Contact</h4><ul>
-      <li><a href="mailto:info@sakurakgl.rw">info@sakurakgl.rw</a></li>
-      <li><a href="tel:+250788688137">+250 788 688 137</a></li>
-      <li><span>Rwandex KN 3 Rd, Kigali</span></li>
-    </ul></div>
-  </div>
-  <div class="footer-bottom">
-    <span>© 2025 Sakura KGL Company Ltd. All Rights Reserved.</span>
-    <span>Kigali, Rwanda</span>
+    <div class="footer-bottom">
+      <span>© <span data-year>2026</span> Sakura KGL Company Ltd. All Rights Reserved.</span>
+      <span>Kigali · Rwanda</span>
+    </div>
   </div>
 </footer>
-<script>
-  (function(){
-    function initUI(){
-      const topbar = document.getElementById('topbar');
-      if (topbar) window.addEventListener('scroll', ()=> topbar.classList.toggle('scrolled', window.scrollY > 30));
 
-      const menuToggle = document.getElementById('menu-toggle');
-      const mainNav = document.getElementById('main-nav');
-      if (menuToggle && mainNav) menuToggle.addEventListener('click', ()=> mainNav.classList.toggle('open'));
+<script src="script.js" defer></script>
 
-      const vids = Array.from(document.querySelectorAll('.bg-video'));
-      if (!vids.length) return;
-      vids.forEach(v=>{ v.addEventListener('canplay', ()=> v.classList.add('visible')); v.play().catch(()=>{}); });
-
-      if ('IntersectionObserver' in window) {
-        const io = new IntersectionObserver((entries)=>{
-          entries.forEach(e=>{
-            const v = e.target;
-            if (e.isIntersecting && e.intersectionRatio > 0.2) {
-              v.play().then(()=>v.classList.add('playing')).catch(()=>{});
-            } else {
-              v.pause(); v.classList.remove('playing');
-            }
-          });
-        }, {threshold:[0,0.2,0.5]});
-        vids.forEach(v=> io.observe(v));
-      } else {
-        vids.forEach(v=> { v.play().catch(()=>{}); v.classList.add('playing'); });
-      }
-    }
-    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initUI); else initUI();
-  })();
-</script>
 </body>
 </html>
