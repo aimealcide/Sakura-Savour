@@ -1,366 +1,181 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact & Book a Meeting — Sakura KGL</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Sakura KGL — freight logistics and business advisory in Kigali, Rwanda.">
+  <title>Contact & Book a Meeting | Sakura KGL</title>
+  <link rel="icon" href="assets/favicon.png" type="image/png">
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="page-contact">
-  <div class="page-video-wrap">
-    <video class="bg-video" autoplay muted loop playsinline preload="metadata" poster="assets/bg-freight-poster.jpg">
-      <source src="assets/bg-freight.mp4" type="video/mp4">
-    </video>
-  </div>
 
-<header class="topbar" id="topbar">
-  <a href="index.html" class="topbar-logo">
-    <div class="logo-icon">S</div>
-    <div class="logo-text">Sakura <span>KGL</span></div>
-  </a>
-  <nav>
-    <ul class="topbar-nav" id="main-nav">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="logistics.html">Freight Logistics</a></li>
-      <li><a href="counseling.html">Business Advisory</a></li>
-      <li><a href="about.html">About Us</a></li>
-    </ul>
-  </nav>
-  <div class="topbar-actions">
-    <a href="contact.html" class="btn-ghost active-btn">Contact</a>
-    <a href="#booking" class="btn-primary">Book a Meeting</a>
+<header class="site-header" id="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="Sakura KGL home">
+      <img src="assets/sakura-mark-light.png" alt="Sakura KGL logo">
+      <span class="brand-wordmark">SAKURA <span>KGL</span></span>
+    </a>
+    <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+      <a href="index.html" class="">Home</a>
+      <a href="logistics.html" class="">Freight Logistics</a>
+      <a href="counseling.html" class="">Business Advisory</a>
+      <a href="about.html" class="">About</a>
+      <a href="index.html#insights">Insights</a>
+    </nav>
+    <div class="header-actions">
+      <a class="btn btn-outline" href="contact.html">Contact</a>
+      <a class="btn btn-gold" href="contact.html#booking">Book a Consultation <span>→</span></a>
+    </div>
+    <button class="menu-toggle" type="button" aria-label="Open menu" aria-controls="site-nav" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </div>
-  <button class="menu-toggle" id="menu-toggle"><span></span><span></span><span></span></button>
 </header>
 
-<div class="page-hero">
-  <div class="section-label">Get in Touch</div>
-  <h1>Contact Sakura KGL</h1>
-  <p>Have a question or a shipment to plan? Send us a message or book time with Claire, our Managing Director.</p>
-  <div class="breadcrumb"><a href="index.html">Home</a> › <span>Contact</span></div>
-</div>
 
-<!-- Contact Info + General Form -->
-<div class="section">
-  <div class="booking-grid">
-    <div class="booking-info">
-      <div class="section-label">Reach Us</div>
-      <h2>Get in Touch</h2>
-      <p>Have a question, a shipment to plan, or just want to know more about what we do? Send us a message and we'll get back to you.</p>
-
-      <div class="contact-detail">
-        <div class="icon">📞</div>
-        <div>
-          <div style="font-weight:600;font-size:0.82rem;color:var(--green-800);margin-bottom:1px;">Company Phone</div>
-          <a href="tel:+250788688137" style="color:var(--text-dark);">+250 788 688 137</a>
-        </div>
-      </div>
-      <div class="contact-detail">
-        <div class="icon">✉️</div>
-        <div>
-          <div style="font-weight:600;font-size:0.82rem;color:var(--green-800);margin-bottom:1px;">Company Email</div>
-          <a href="mailto:info@sakurakgl.rw" style="color:var(--text-dark);">info@sakurakgl.rw</a>
-        </div>
-      </div>
-      <div class="contact-detail">
-        <div class="icon">👤</div>
-        <div>
-          <div style="font-weight:600;font-size:0.82rem;color:var(--green-800);margin-bottom:1px;">MD Direct Line</div>
-          <a href="tel:+250788501317" style="color:var(--text-dark);">+250 788 501 317</a>
-        </div>
-      </div>
-      <div class="contact-detail">
-        <div class="icon">✉️</div>
-        <div>
-          <div style="font-weight:600;font-size:0.82rem;color:var(--green-800);margin-bottom:1px;">MD Email</div>
-          <a href="mailto:claire.benihirwe@gmail.com" style="color:var(--text-dark);">claire.benihirwe@gmail.com</a>
-        </div>
-      </div>
-      <div class="contact-detail">
-        <div class="icon">📍</div>
-        <div>
-          <div style="font-weight:600;font-size:0.82rem;color:var(--green-800);margin-bottom:1px;">Office Address</div>
-          <span>Rwandex KN 3 Rd, Kigali, Rwanda</span>
-        </div>
-      </div>
-
-      <div style="margin-top:2rem;padding:1.5rem;background:var(--green-100);border-radius:var(--radius-md);border-left:4px solid var(--green-600);">
-        <div style="font-weight:700;color:var(--green-900);margin-bottom:0.4rem;font-size:0.9rem;">Office Hours</div>
-        <div style="font-size:0.86rem;color:var(--text-mid);line-height:1.8;">
-          Monday to Friday: 8:00 AM to 6:00 PM<br>
-          Saturday: 9:00 AM to 1:00 PM<br>
-          Sunday: Closed
-        </div>
-      </div>
+<main>
+  <section class="page-hero">
+    <div class="container page-hero-inner">
+      <div class="kicker">Get in Touch</div>
+      <h1>Let's talk about what needs to move.</h1>
+      <p>Have a question, a shipment to plan or an operational challenge to solve? Send us a message or book time with our Managing Director.</p>
+      <div class="breadcrumb"><a href="index.html">Home</a><span>›</span><span>Contact</span></div>
     </div>
+  </section>
 
-    <div class="form-card">
-      <h3>Send Us a Message</h3>
-      <span class="form-subtitle">We usually reply within one business day.</span>
-
-      <div id="contact-alert" class="alert"></div>
-
-      <form id="contact-form" action="send.php" method="POST">
-        <!-- honeypot spam trap: real visitors never see or fill this in -->
-        <input type="text" name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;opacity:0;height:0;">
-
-        <div class="form-row">
-          <div class="form-group">
-            <label for="c-name">Full Name *</label>
-            <input type="text" id="c-name" name="name" placeholder="Your name" required>
-          </div>
-          <div class="form-group">
-            <label for="c-company">Company / Organisation</label>
-            <input type="text" id="c-company" name="company" placeholder="Optional">
-          </div>
+  <section class="section">
+    <div class="container booking-layout">
+      <div class="reveal">
+        <div class="section-head">
+          <div class="kicker">Reach Us</div>
+          <h2 class="title">A direct line to Sakura KGL.</h2>
+          <p class="lead">Tell us what you need. We aim to keep the first conversation straightforward and useful.</p>
         </div>
-        <div class="form-group">
-          <label for="c-email">Email Address *</label>
-          <input type="email" id="c-email" name="email" placeholder="your@email.com" required>
+        <div class="contact-stack">
+          <div class="contact-card"><div class="mini">Company Phone</div><a href="tel:+250788688137">+250 788 688 137</a></div>
+          <div class="contact-card"><div class="mini">Company Email</div><a href="mailto:info@sakurakgl.rw">info@sakurakgl.rw</a></div>
+          <div class="contact-card"><div class="mini">MD Direct Line</div><a href="tel:+250788501317">+250 788 501 317</a></div>
+          <div class="contact-card"><div class="mini">MD Email</div><a href="mailto:claire.benihirwe@gmail.com">claire.benihirwe@gmail.com</a></div>
+          <div class="contact-card"><div class="mini">Office Address</div><span>Rwandex KN 3 Rd, Kigali, Rwanda</span></div>
         </div>
-        <div class="form-group">
-          <label for="c-phone">Phone Number</label>
-          <input type="tel" id="c-phone" name="phone" placeholder="+250 ...">
-        </div>
-        <div class="form-group">
-          <label for="c-service">Interested In</label>
-          <select id="c-service" name="service">
-            <option value="">Select a service...</option>
-            <option>Freight Logistics</option>
-            <option>Business Advisory</option>
-            <option>General Enquiry</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="c-message">Message *</label>
-          <textarea id="c-message" name="message" rows="4" placeholder="Tell us how we can help..." required></textarea>
-        </div>
-        <button type="submit" class="form-submit">Send Message</button>
-      </form>
-    </div>
-  </div>
-</div>
-
-<!-- ─── Meeting Booking Section ─── -->
-<div class="section-full" id="booking">
-  <div class="section">
-    <div style="text-align:center;margin-bottom:3rem;">
-      <div class="section-label" style="justify-content:center;">Schedule a Session</div>
-      <h2 class="section-title">Book time with Claire, our Managing Director</h2>
-      <p class="section-subtitle" style="margin:0 auto;">Meet Claire for a focused conversation about your needs and practical next steps.</p>
-    </div>
-
-    <div class="booking-grid">
-      <div>
-        <div style="background:linear-gradient(135deg,var(--green-800),var(--green-700));border-radius:var(--radius-lg);padding:2.5rem;color:white;margin-bottom:1.5rem;">
-          <div style="font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--gold-light);margin-bottom:1rem;">Managing Director</div>
-          <div style="font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:600;color:white;margin-bottom:0.2rem;">Claire Benihirwe</div>
-          <div style="font-size:0.85rem;color:rgba(255,255,255,0.65);margin-bottom:1.5rem;">Founder & Managing Director, Sakura KGL</div>
-          <ul style="list-style:none;display:flex;flex-direction:column;gap:0.8rem;">
-            <li style="display:flex;align-items:center;gap:0.7rem;font-size:0.88rem;color:rgba(255,255,255,0.8);">
-              <span style="background:rgba(255,255,255,0.1);padding:0.3rem 0.6rem;border-radius:6px;">📞</span> +250 788 501 317
-            </li>
-            <li style="display:flex;align-items:center;gap:0.7rem;font-size:0.88rem;color:rgba(255,255,255,0.8);">
-              <span style="background:rgba(255,255,255,0.1);padding:0.3rem 0.6rem;border-radius:6px;">✉️</span> claire.benihirwe@gmail.com
-            </li>
-          </ul>
-        </div>
-        <div style="padding:1.5rem;background:var(--green-100);border-radius:var(--radius-md);">
-          <div style="font-weight:700;color:var(--green-900);margin-bottom:1rem;font-size:0.9rem;">What to Expect</div>
-          <ul class="feature-list">
-            <li>30 to 60 minute structured discussion</li>
-            <li>Personalised assessment of your needs</li>
-            <li>Clear recommendations and next steps</li>
-            <li>No obligation, just an open conversation</li>
-          </ul>
-        </div>
+        <div class="hours"><strong>Office Hours</strong><p>Monday to Friday: 8:00 AM to 6:00 PM<br>Saturday: 9:00 AM to 1:00 PM<br>Sunday: Closed</p></div>
       </div>
 
-      <div class="form-card">
-        <h3>Meeting Request Form</h3>
-        <span class="form-subtitle">Tell us a few details and we'll confirm a meeting time within one business day.</span>
-
-        <div id="booking-alert" class="alert"></div>
-
-        <form id="booking-form" action="send.php" method="POST">
-          <!-- honeypot spam trap -->
-          <input type="text" name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;opacity:0;height:0;">
-          <input type="hidden" name="_subject" value="Meeting Request — Sakura KGL">
-          <div class="form-row">
-            <div class="form-group">
-              <label for="b-name">Full Name *</label>
-              <input type="text" id="b-name" name="name" placeholder="Your full name" required>
-            </div>
-            <div class="form-group">
-              <label for="b-company">Company / Organisation *</label>
-              <input type="text" id="b-company" name="company" placeholder="Your organisation" required>
-            </div>
+      <div class="form-card reveal delay-1">
+        <h2>Send us a message</h2>
+        <span class="form-note">We usually reply within one business day.</span>
+        <div id="contact-alert" class="alert" role="status" aria-live="polite"></div>
+        <form id="contact-form" action="send.php" method="POST">
+          <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;opacity:0;height:0;width:0">
+          <div class="form-grid">
+            <div class="form-group"><label for="c-name">Full Name *</label><input id="c-name" name="name" type="text" placeholder="Your name" autocomplete="name" required></div>
+            <div class="form-group"><label for="c-company">Company / Organisation</label><input id="c-company" name="company" type="text" placeholder="Optional" autocomplete="organization"></div>
+            <div class="form-group"><label for="c-email">Email Address *</label><input id="c-email" name="email" type="email" placeholder="your@email.com" autocomplete="email" required></div>
+            <div class="form-group"><label for="c-phone">Phone Number</label><input id="c-phone" name="phone" type="tel" placeholder="+250 ..." autocomplete="tel"></div>
+            <div class="form-group full"><label for="c-service">Interested In</label><select id="c-service" name="service"><option value="">Select a service...</option><option>Freight Logistics</option><option>Business Advisory</option><option>General Enquiry</option></select></div>
+            <div class="form-group full"><label for="c-message">Message *</label><textarea id="c-message" name="message" placeholder="Tell us how we can help..." required></textarea></div>
           </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="b-email">Email Address *</label>
-              <input type="email" id="b-email" name="email" placeholder="your@email.com" required>
-            </div>
-            <div class="form-group">
-              <label for="b-phone">Phone Number *</label>
-              <input type="tel" id="b-phone" name="phone" placeholder="+250 ..." required>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="b-topic">Meeting Topic *</label>
-            <select id="b-topic" name="meeting_topic" required>
-              <option value="">Select a topic...</option>
-              <option>Freight Logistics: New Partnership</option>
-              <option>Business Advisory: Strategy Session</option>
-              <option>General Business Discussion</option>
-              <option>Partnership & Investment Enquiry</option>
-            </select>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="b-date">Preferred Date *</label>
-              <input type="date" id="b-date" name="preferred_date" required>
-            </div>
-            <div class="form-group">
-              <label for="b-time">Preferred Time *</label>
-              <select id="b-time" name="preferred_time" required>
-                <option value="">Select time...</option>
-                <option>08:00 AM</option>
-                <option>09:00 AM</option>
-                <option>10:00 AM</option>
-                <option>11:00 AM</option>
-                <option>12:00 PM</option>
-                <option>02:00 PM</option>
-                <option>03:00 PM</option>
-                <option>04:00 PM</option>
-                <option>05:00 PM</option>
-              </select>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="b-format">Meeting Format</label>
-            <select id="b-format" name="meeting_format">
-              <option>In-Person (Rwandex Office, Kigali)</option>
-              <option>Video Call (Google Meet / Zoom)</option>
-              <option>Phone Call</option>
-              <option>Flexible: Any Format</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="b-notes">Additional Notes</label>
-            <textarea id="b-notes" name="notes" rows="3" placeholder="Brief agenda, specific questions, or anything else we should know..."></textarea>
-          </div>
-          <button type="submit" class="form-submit">Submit Meeting Request</button>
+          <button class="form-submit" type="submit">Send Message</button>
         </form>
       </div>
     </div>
-  </div>
-</div>
+  </section>
+
+  <section class="section section--cream" id="booking">
+    <div class="container">
+      <div class="section-head center reveal">
+        <div class="kicker">Schedule a Session</div>
+        <h2 class="title">Book time with Claire, our Managing Director.</h2>
+        <p class="lead">Meet Claire for a focused conversation about your needs and practical next steps.</p>
+      </div>
+      <div class="booking-layout">
+        <div class="reveal">
+          <div class="info-panel">
+            <div class="kicker">Managing Director</div>
+            <h3>Claire Benihirwe</h3>
+            <p>Founder & Managing Director, Sakura KGL</p>
+            <div class="info-lines">
+              <div class="info-line"><b>Phone</b><a href="tel:+250788501317">+250 788 501 317</a></div>
+              <div class="info-line"><b>Email</b><a href="mailto:claire.benihirwe@gmail.com">claire.benihirwe@gmail.com</a></div>
+            </div>
+          </div>
+          <div class="hours" style="margin-top:14px"><strong>What to expect</strong><p>30 to 60 minute structured discussion<br>Personalised assessment of your needs<br>Clear recommendations and next steps<br>No obligation, just an open conversation</p></div>
+        </div>
+
+        <div class="form-card reveal delay-1">
+          <h2>Meeting request form</h2>
+          <span class="form-note">Tell us a few details and we'll confirm a meeting time within one business day.</span>
+          <div id="booking-alert" class="alert" role="status" aria-live="polite"></div>
+          <form id="booking-form" action="send.php" method="POST">
+            <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;opacity:0;height:0;width:0">
+            <input type="hidden" name="_subject" value="Meeting Request — Sakura KGL">
+            <div class="form-grid">
+              <div class="form-group"><label for="b-name">Full Name *</label><input id="b-name" name="name" type="text" placeholder="Your full name" autocomplete="name" required></div>
+              <div class="form-group"><label for="b-company">Company / Organisation *</label><input id="b-company" name="company" type="text" placeholder="Your organisation" autocomplete="organization" required></div>
+              <div class="form-group"><label for="b-email">Email Address *</label><input id="b-email" name="email" type="email" placeholder="your@email.com" autocomplete="email" required></div>
+              <div class="form-group"><label for="b-phone">Phone Number *</label><input id="b-phone" name="phone" type="tel" placeholder="+250 ..." autocomplete="tel" required></div>
+              <div class="form-group full"><label for="b-topic">Meeting Topic *</label><select id="b-topic" name="meeting_topic" required><option value="">Select a topic...</option><option>Freight Logistics: New Partnership</option><option>Business Advisory: Strategy Session</option><option>General Business Discussion</option><option>Partnership & Investment Enquiry</option></select></div>
+              <div class="form-group"><label for="b-date">Preferred Date *</label><input id="b-date" name="preferred_date" type="date" required></div>
+              <div class="form-group"><label for="b-time">Preferred Time *</label><select id="b-time" name="preferred_time" required><option value="">Select time...</option><option>08:00 AM</option><option>09:00 AM</option><option>10:00 AM</option><option>11:00 AM</option><option>12:00 PM</option><option>02:00 PM</option><option>03:00 PM</option><option>04:00 PM</option><option>05:00 PM</option></select></div>
+              <div class="form-group full"><label for="b-format">Meeting Format</label><select id="b-format" name="meeting_format"><option>In-Person (Rwandex Office, Kigali)</option><option>Video Call (Google Meet / Zoom)</option><option>Phone Call</option><option>Flexible: Any Format</option></select></div>
+              <div class="form-group full"><label for="b-notes">Additional Notes</label><textarea id="b-notes" name="notes" placeholder="Brief agenda, specific questions, or anything else we should know..."></textarea></div>
+            </div>
+            <button class="form-submit" type="submit">Submit Meeting Request</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
 
 <footer class="footer">
-  <div class="footer-grid">
-    <div class="footer-brand">
-      <span class="logo-text">Sakura <span>KGL</span></span>
-      <span class="tagline">Kigali-based logistics & advisory</span>
-      <p>Rwanda's trusted partner for freight logistics and business advisory.</p>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="index.html" aria-label="Sakura KGL home">
+          <img src="assets/sakura-mark-light.png" alt="Sakura KGL logo">
+          <span class="brand-wordmark">SAKURA <span>KGL</span></span>
+        </a>
+        <span class="footer-tagline">Freight logistics & business advisory</span>
+        <p>Kigali-based, hands-on support for businesses that need their goods and operations to keep moving.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="logistics.html">Freight Logistics</a></li>
+          <li><a href="counseling.html">Business Advisory</a></li>
+          <li><a href="contact.html#booking">Book a Consultation</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="index.html#insights">Insights</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="mailto:info@sakurakgl.rw">info@sakurakgl.rw</a></li>
+          <li><a href="tel:+250788688137">+250 788 688 137</a></li>
+          <li><a href="mailto:claire.benihirwe@gmail.com">claire.benihirwe@gmail.com</a></li>
+          <li><a href="tel:+250788501317">+250 788 501 317</a></li>
+          <li><span>Rwandex KN 3 Rd, Kigali, Rwanda</span></li>
+        </ul>
+      </div>
     </div>
-    <div class="footer-col"><h4>Services</h4><ul>
-      <li><a href="logistics.html">Freight Logistics</a></li>
-      <li><a href="counseling.html">Business Advisory</a></li>
-      <li><a href="#booking">Book a Meeting</a></li>
-    </ul></div>
-    <div class="footer-col"><h4>Company</h4><ul>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul></div>
-    <div class="footer-col"><h4>Contact</h4><ul>
-      <li><a href="mailto:info@sakurakgl.rw">info@sakurakgl.rw</a></li>
-      <li><a href="tel:+250788688137">+250 788 688 137</a></li>
-      <li><span>Rwandex KN 3 Rd, Kigali</span></li>
-    </ul></div>
-  </div>
-  <div class="footer-bottom">
-    <span>© 2025 Sakura KGL Company Ltd. All Rights Reserved.</span>
-    <span>Kigali, Rwanda</span>
+    <div class="footer-bottom">
+      <span>© <span data-year>2026</span> Sakura KGL Company Ltd. All Rights Reserved.</span>
+      <span>Kigali · Rwanda</span>
+    </div>
   </div>
 </footer>
 
-<script>
-  (function(){
-    function initUI(){
-      // Topbar scroll effect
-      const topbar = document.getElementById('topbar');
-      if (topbar) window.addEventListener('scroll', ()=> topbar.classList.toggle('scrolled', window.scrollY > 30));
+<script src="script.js" defer></script>
 
-      // Mobile menu
-      const menuToggle = document.getElementById('menu-toggle');
-      const mainNav = document.getElementById('main-nav');
-      if (menuToggle && mainNav) menuToggle.addEventListener('click', ()=> mainNav.classList.toggle('open'));
-
-      // Background video visibility
-      const vids = Array.from(document.querySelectorAll('.bg-video'));
-      vids.forEach(v=>{ v.addEventListener('canplay', ()=> v.classList.add('visible')); v.play().catch(()=>{}); });
-      if ('IntersectionObserver' in window) {
-        const io = new IntersectionObserver((entries)=>{
-          entries.forEach(e=>{
-            if (e.isIntersecting && e.intersectionRatio > 0.2) e.target.play().catch(()=>{});
-            else e.target.pause();
-          });
-        }, {threshold:[0,0.2,0.5]});
-        vids.forEach(v=> io.observe(v));
-      }
-
-      // Booking minimum date
-      const bookingDate = document.getElementById('b-date');
-      if (bookingDate) bookingDate.min = new Date().toISOString().split('T')[0];
-
-      // Generic form submit handler, shared by both forms
-      function wireForm(formId, alertId, sendingLabel, defaultLabel, successMsg) {
-        const form = document.getElementById(formId);
-        if (!form) return;
-        form.addEventListener('submit', async function (e) {
-          e.preventDefault();
-          const alertEl = document.getElementById(alertId);
-          const btn = this.querySelector('.form-submit');
-
-          btn.disabled = true;
-          btn.textContent = sendingLabel;
-          alertEl.style.display = 'none';
-          alertEl.innerHTML = '';
-
-          try {
-            const response = await fetch(this.action, {
-              method: 'POST',
-              body: new FormData(this),
-              headers: { 'Accept': 'application/json' }
-            });
-            const result = await response.json();
-
-            if (response.ok && result.ok) {
-              this.reset();
-              alertEl.className = 'alert success';
-              alertEl.textContent = successMsg;
-            } else {
-              alertEl.className = 'alert error';
-              alertEl.textContent = result.error || 'Something went wrong. Please try again or email us directly.';
-            }
-          } catch (err) {
-            alertEl.className = 'alert error';
-            alertEl.textContent = 'Connection failed. Please check your internet and try again.';
-          }
-
-          alertEl.style.display = 'block';
-          btn.disabled = false;
-          btn.textContent = defaultLabel;
-          alertEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        });
-      }
-
-      wireForm('contact-form', 'contact-alert', 'Sending...', 'Send Message', 'Message sent. We will get back to you soon.');
-      wireForm('booking-form', 'booking-alert', 'Submitting...', 'Submit Meeting Request', 'Meeting request received. We will confirm within one business day.');
-    }
-    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initUI); else initUI();
-  })();
-</script>
 </body>
 </html>
