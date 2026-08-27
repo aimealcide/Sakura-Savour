@@ -3,10 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sakura KGL — Your Ideal Partner</title>
+  <title>Sakura KGL | Freight Logistics & Business Advisory, Kigali</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="page-index">
+  <div class="page-video-wrap">
+    <video class="bg-video" autoplay muted loop playsinline preload="metadata" poster="assets/bg-freight-poster.jpg">
+      <source src="assets/bg-freight.mp4" type="video/mp4">
+    </video>
+  </div>
 
 <!-- ─── Topbar ─── -->
 <header class="topbar" id="topbar">
@@ -19,13 +24,12 @@
       <li><a href="index.html" class="active">Home</a></li>
       <li><a href="logistics.html">Freight Logistics</a></li>
       <li><a href="counseling.html">Business Advisory</a></li>
-      <li><a href="canteen.html">Canteen Mgmt</a></li>
       <li><a href="about.html">About Us</a></li>
     </ul>
   </nav>
   <div class="topbar-actions" id="topbar-actions">
     <a href="contact.html" class="btn-ghost">Contact</a>
-    <a href="contact.html#booking" class="btn-primary">📅 Book a Meeting</a>
+    <a href="contact.html#booking" class="btn-primary">Book a Meeting</a>
   </div>
   <button class="menu-toggle" id="menu-toggle" aria-label="Menu">
     <span></span><span></span><span></span>
@@ -34,16 +38,15 @@
 
 <!-- ─── Hero ─── -->
 <section class="hero">
-  <div class="hero-bg"></div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <div class="hero-left">
       <div class="hero-eyebrow">Kigali · Rwanda · Est. 2024</div>
       <h1 class="hero-title">
-        Delivering <em>Excellence</em> Across Every Sector
+        Logistics & advisory that work for your business
       </h1>
       <p class="hero-desc">
-        Sakura KGL is Rwanda's trusted partner for Freight Logistics, Business Advisory, and Professional Canteen Management. We move your business forward — seamlessly.
+        Based in Kigali, we help businesses move goods and solve logistics challenges, practically and reliably.
       </p>
       <div class="hero-cta">
         <a href="logistics.html" class="btn-hero-primary">Explore Our Services →</a>
@@ -56,7 +59,7 @@
         <div class="stat-label">Logistics Services</div>
       </div>
       <div class="stat-card">
-        <div class="stat-number">3</div>
+        <div class="stat-number">2</div>
         <div class="stat-label">Business Divisions</div>
       </div>
       <div class="stat-card">
@@ -71,30 +74,32 @@
   </div>
 </section>
 
+<!-- ─── Trust Strip ─── -->
+<div class="trust-strip">
+  <span>✓ Licensed & Insured</span>
+  <span>✓ Kigali-Based, Nationwide Reach</span>
+  <span>✓ Global Freight Network</span>
+  <span>✓ Direct MD Access</span>
+</div>
+
 <!-- ─── Services Overview ─── -->
 <div class="section">
   <div class="section-label">What We Do</div>
-  <h2 class="section-title">Three Pillars of Expertise</h2>
-  <p class="section-subtitle">From global freight to business strategy and daily canteen operations — Sakura KGL delivers professional results across every division.</p>
+  <h2 class="section-title">Two Pillars of Expertise</h2>
+  <p class="section-subtitle">From global freight movement to business strategy, Sakura KGL provides practical services across both divisions.</p>
 
-  <div class="cards-grid">
-    <a href="logistics.html" class="card" style="text-decoration:none;">
-      <div class="card-icon">🚢</div>
+  <div class="pillar-grid">
+    <a href="logistics.html" class="pillar-card" style="background-image:linear-gradient(180deg, rgba(7,26,13,0.15) 0%, rgba(7,26,13,0.92) 100%), url('https://images.unsplash.com/photo-1494412651409-8963ce7935a7?auto=format&fit=crop&w=1200&q=80');">
+      <div class="pillar-tag">Division 01</div>
       <h3>Freight Logistics</h3>
       <p>End-to-end supply chain management including cargo handling, customs clearance, warehousing, airfreight, seafreight, and inland transportation across Rwanda and beyond.</p>
-      <br><span style="font-size:0.85rem;color:var(--green-600);font-weight:600;">Learn More →</span>
+      <span class="pillar-link">Explore Freight Logistics →</span>
     </a>
-    <a href="counseling.html" class="card" style="text-decoration:none;">
-      <div class="card-icon">📊</div>
+    <a href="counseling.html" class="pillar-card" style="background-image:linear-gradient(180deg, rgba(7,26,13,0.15) 0%, rgba(7,26,13,0.92) 100%), url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1200&q=80');">
+      <div class="pillar-tag">Division 02</div>
       <h3>Business Advisory</h3>
       <p>Expert strategic guidance to optimize your logistics operations, develop supply chain strategies, and streamline your business for peak efficiency and profitability.</p>
-      <br><span style="font-size:0.85rem;color:var(--green-600);font-weight:600;">Learn More →</span>
-    </a>
-    <a href="canteen.html" class="card" style="text-decoration:none;">
-      <div class="card-icon">🍽️</div>
-      <h3>Canteen Management</h3>
-      <p>Professional canteen and food service management for businesses, institutions, and events across Kigali and all of Rwanda — with local and international cuisine.</p>
-      <br><span style="font-size:0.85rem;color:var(--green-600);font-weight:600;">Learn More →</span>
+      <span class="pillar-link">Explore Business Advisory →</span>
     </a>
   </div>
 </div>
@@ -106,22 +111,22 @@
       <div>
         <div class="section-label">Why Sakura KGL</div>
         <h2 class="section-title">Built on Trust, Driven by Results</h2>
-        <p class="section-subtitle">"Don't tell me how good you make it; tell me how good it makes me when I use it." — Michael LeBoeuf, Ph.D</p>
+        <p class="section-subtitle">We're a small, hands-on team, so when you call, you talk to someone who actually knows your shipment or your file. That's the difference we try to make.</p>
         <ul class="feature-list">
-          <li>Dedicated team with deep industry expertise</li>
-          <li>Tailored solutions — no one-size-fits-all approach</li>
-          <li>Transparent communication at every stage</li>
-          <li>Competitive pricing without compromising quality</li>
-          <li>Full accountability from contract to delivery</li>
-          <li>Rwanda-focused with global logistics reach</li>
+          <li>A team that knows the industry from the ground up</li>
+          <li>Solutions built around your business, not a fixed package</li>
+          <li>Clear communication so you always know where things stand</li>
+          <li>Fair pricing without cutting corners on quality</li>
+          <li>Full accountability from the first call to final delivery</li>
+          <li>Rooted in Rwanda, connected to global logistics routes</li>
         </ul>
       </div>
       <div class="accent-panel">
         <div class="section-label">Our Mission</div>
-        <h2 class="section-title" style="font-size:1.7rem;">To Meet & Exceed Every Client Expectation</h2>
-        <p class="section-subtitle">We foster satisfaction that builds loyalty and helps us grow together — because your success is our benchmark.</p>
+        <h2 class="section-title" style="font-size:1.7rem;">To meet client needs and deliver clear results</h2>
+        <p class="section-subtitle">We focus on practical work that helps your business run smoother and grow where it matters.</p>
         <br>
-        <a href="contact.html#booking" class="btn-hero-primary" style="display:inline-flex;">📅 Book a Meeting with Our MD</a>
+        <a href="contact.html#booking" class="btn-hero-primary" style="display:inline-flex;">Book a Meeting with Our MD</a>
       </div>
     </div>
   </div>
@@ -129,14 +134,13 @@
 
 <!-- ─── Core Values ─── -->
 <div class="section">
-  <div class="section-label">Our Foundation</div>
-  <h2 class="section-title">Core Values</h2>
+  <div class="section-label">How We Work</div>
+  <h2 class="section-title">What You Can Expect From Us</h2>
   <div class="value-cards">
-    <div class="value-card"><span class="v-icon">🤝</span><h3>Integrity</h3><p>Honest and transparent in all our dealings</p></div>
-    <div class="value-card"><span class="v-icon">🔒</span><h3>Reliability</h3><p>Consistent performance you can count on</p></div>
-    <div class="value-card"><span class="v-icon">⭐</span><h3>Professionalism</h3><p>World-class service standards every time</p></div>
-    <div class="value-card"><span class="v-icon">💡</span><h3>Innovation</h3><p>Modern solutions for modern challenges</p></div>
-    <div class="value-card"><span class="v-icon">🎯</span><h3>Client Focus</h3><p>Your goals are our primary objective</p></div>
+    <div class="value-card"><span class="v-icon">🤝</span><h3>Straight talk</h3><p>We tell you the real timeline and the real cost, even when it's not what you want to hear.</p></div>
+    <div class="value-card"><span class="v-icon">🔒</span><h3>We show up</h3><p>If we say Tuesday, it's Tuesday. Your shipment or your meeting isn't an afterthought.</p></div>
+    <div class="value-card"><span class="v-icon">⭐</span><h3>We know the work</h3><p>Years spent in Kigali's ports, warehouses, and boardrooms, not just in theory.</p></div>
+    <div class="value-card"><span class="v-icon">🎯</span><h3>Your problem first</h3><p>We start by understanding what's actually slowing you down, not by pitching a package.</p></div>
   </div>
 </div>
 
@@ -148,8 +152,8 @@
       Ready to Start?
     </div>
     <h2>Schedule a Meeting with Our Managing Director</h2>
-    <p>Whether you need logistics solutions, business advisory, or canteen management — let's talk. We're ready to build something great together.</p>
-    <a href="contact.html#booking" class="btn-hero-primary">📅 Book Your Meeting Today</a>
+    <p>Whether you need logistics solutions or business advisory, get in touch. We're happy to talk through what you need.</p>
+    <a href="contact.html#booking" class="btn-hero-primary">Book Your Meeting Today</a>
   </div>
 </div>
 
@@ -158,15 +162,14 @@
   <div class="footer-grid">
     <div class="footer-brand">
       <span class="logo-text">Sakura <span>KGL</span></span>
-      <span class="tagline">Your Ideal Type</span>
-      <p>Rwanda's trusted partner for logistics, business advisory, and professional canteen management. Headquartered in Kigali.</p>
+      <span class="tagline">Kigali-based logistics & advisory</span>
+      <p>Rwanda's trusted partner for freight logistics and business advisory. Headquartered in Kigali.</p>
     </div>
     <div class="footer-col">
       <h4>Services</h4>
       <ul>
         <li><a href="logistics.html">Freight Logistics</a></li>
         <li><a href="counseling.html">Business Advisory</a></li>
-        <li><a href="canteen.html">Canteen Management</a></li>
         <li><a href="contact.html#booking">Book a Meeting</a></li>
       </ul>
     </div>
@@ -195,14 +198,40 @@
 </footer>
 
 <script>
-  // Topbar scroll effect
-  window.addEventListener('scroll', () => {
-    document.getElementById('topbar').classList.toggle('scrolled', window.scrollY > 30);
-  });
-  // Mobile menu
-  document.getElementById('menu-toggle').addEventListener('click', () => {
-    document.getElementById('main-nav').classList.toggle('open');
-  });
+  (function(){
+    function initUI(){
+      // safe topbar scroll
+      const topbar = document.getElementById('topbar');
+      if (topbar) window.addEventListener('scroll', ()=> topbar.classList.toggle('scrolled', window.scrollY > 30));
+
+      // safe mobile menu
+      const menuToggle = document.getElementById('menu-toggle');
+      const mainNav = document.getElementById('main-nav');
+      if (menuToggle && mainNav) menuToggle.addEventListener('click', ()=> mainNav.classList.toggle('open'));
+
+      // video handling
+      const vids = Array.from(document.querySelectorAll('.bg-video'));
+      if (!vids.length) return;
+      vids.forEach(v=>{ v.addEventListener('canplay', ()=> v.classList.add('visible')); v.play().catch(()=>{}); });
+
+      if ('IntersectionObserver' in window) {
+        const io = new IntersectionObserver((entries)=>{
+          entries.forEach(e=>{
+            const v = e.target;
+            if (e.isIntersecting && e.intersectionRatio > 0.2) {
+              v.play().then(()=>v.classList.add('playing')).catch(()=>{});
+            } else {
+              v.pause(); v.classList.remove('playing');
+            }
+          });
+        }, {threshold:[0,0.2,0.5]});
+        vids.forEach(v=> io.observe(v));
+      } else {
+        vids.forEach(v=> { v.play().catch(()=>{}); v.classList.add('playing'); });
+      }
+    }
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initUI); else initUI();
+  })();
 </script>
 </body>
 </html>

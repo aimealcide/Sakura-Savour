@@ -6,7 +6,12 @@
   <title>Business Advisory — Sakura KGL</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="page-counseling">
+  <div class="page-video-wrap">
+    <video class="bg-video" autoplay muted loop playsinline preload="metadata" poster="assets/bg-freight-poster.jpg">
+      <source src="assets/bg-freight.mp4" type="video/mp4">
+    </video>
+  </div>
 
 <header class="topbar" id="topbar">
   <a href="index.html" class="topbar-logo">
@@ -18,13 +23,12 @@
       <li><a href="index.html">Home</a></li>
       <li><a href="logistics.html">Freight Logistics</a></li>
       <li><a href="counseling.html" class="active">Business Advisory</a></li>
-      <li><a href="canteen.html">Canteen Mgmt</a></li>
       <li><a href="about.html">About Us</a></li>
     </ul>
   </nav>
   <div class="topbar-actions">
     <a href="contact.html" class="btn-ghost">Contact</a>
-    <a href="contact.html#booking" class="btn-primary">📅 Book a Meeting</a>
+    <a href="contact.html#booking" class="btn-primary">Book a Meeting</a>
   </div>
   <button class="menu-toggle" id="menu-toggle"><span></span><span></span><span></span></button>
 </header>
@@ -32,7 +36,7 @@
 <div class="page-hero">
   <div class="section-label">Expert Guidance</div>
   <h1>Business Advisory Services</h1>
-  <p>Strategic insight and operational expertise to help your business thrive in a competitive landscape.</p>
+  <p>Practical advice to improve your logistics and operations.</p>
   <div class="breadcrumb"><a href="index.html">Home</a> › <span>Business Advisory</span></div>
 </div>
 
@@ -42,8 +46,8 @@
     <div>
       <div class="section-label">What We Do</div>
       <h2 class="section-title">Helping You Optimize Operations & Strategy</h2>
-      <p class="section-subtitle">Our advisory services are designed to help businesses improve their logistics and supply chain management. We provide expert advice and customized strategies to enhance efficiency and reduce costs.</p>
-      <a href="contact.html#booking" class="btn-primary" style="font-size:0.95rem;padding:0.75rem 1.8rem;border-radius:8px;">📅 Book a Consultation</a>
+      <p class="section-subtitle">Our advisory services help businesses improve logistics and supply chain management with practical, tailored recommendations to cut costs and run more smoothly.</p>
+      <a href="contact.html#booking" class="btn-primary" style="font-size:0.95rem;padding:0.75rem 1.8rem;border-radius:8px;">Book a Consultation</a>
     </div>
     <div style="display:flex;flex-direction:column;gap:1.2rem;">
       <div class="card" style="padding:1.5rem;">
@@ -93,10 +97,10 @@
         <h3>Supply Chain Strategy Development</h3>
         <p>Building a resilient and agile supply chain strategy tailored to your industry, market position, and future growth plans.</p>
       </div>
-      <div class="card">
+        <div class="card">
         <div class="card-icon">📊</div>
         <h3>Inventory Optimization</h3>
-        <p>Reducing surplus, improving replenishment cycles, and deploying best-practice inventory management to free up working capital.</p>
+        <p>Reducing surplus, improving replenishment cycles, and using practical inventory management to free up working capital.</p>
       </div>
       <div class="card">
         <div class="card-icon">👥</div>
@@ -123,7 +127,7 @@
     <div class="section-label" style="justify-content:center;">Take the First Step</div>
     <h2 class="section-title">Ready to Transform Your Business Operations?</h2>
     <p class="section-subtitle" style="max-width:550px;margin:0 auto 2rem;">Schedule a one-on-one consultation with our Managing Director and get a personalised advisory roadmap for your business.</p>
-    <a href="contact.html#booking" class="btn-hero-primary">📅 Book a Strategy Session</a>
+    <a href="contact.html#booking" class="btn-hero-primary">Book a Strategy Session</a>
   </div>
 </div>
 
@@ -131,13 +135,12 @@
   <div class="footer-grid">
     <div class="footer-brand">
       <span class="logo-text">Sakura <span>KGL</span></span>
-      <span class="tagline">Your Ideal Type</span>
-      <p>Rwanda's trusted partner for logistics, business advisory, and canteen management.</p>
+      <span class="tagline">Kigali-based logistics & advisory</span>
+      <p>Rwanda's trusted partner for freight logistics and business advisory.</p>
     </div>
     <div class="footer-col"><h4>Services</h4><ul>
       <li><a href="logistics.html">Freight Logistics</a></li>
       <li><a href="counseling.html">Business Advisory</a></li>
-      <li><a href="canteen.html">Canteen Management</a></li>
       <li><a href="contact.html#booking">Book a Meeting</a></li>
     </ul></div>
     <div class="footer-col"><h4>Company</h4><ul>
@@ -156,8 +159,37 @@
   </div>
 </footer>
 <script>
-  window.addEventListener('scroll',()=>document.getElementById('topbar').classList.toggle('scrolled',scrollY>30));
-  document.getElementById('menu-toggle').addEventListener('click',()=>document.getElementById('main-nav').classList.toggle('open'));
+  (function(){
+    function initUI(){
+      const topbar = document.getElementById('topbar');
+      if (topbar) window.addEventListener('scroll', ()=> topbar.classList.toggle('scrolled', window.scrollY > 30));
+
+      const menuToggle = document.getElementById('menu-toggle');
+      const mainNav = document.getElementById('main-nav');
+      if (menuToggle && mainNav) menuToggle.addEventListener('click', ()=> mainNav.classList.toggle('open'));
+
+      const vids = Array.from(document.querySelectorAll('.bg-video'));
+      if (!vids.length) return;
+      vids.forEach(v=>{ v.addEventListener('canplay', ()=> v.classList.add('visible')); v.play().catch(()=>{}); });
+
+      if ('IntersectionObserver' in window) {
+        const io = new IntersectionObserver((entries)=>{
+          entries.forEach(e=>{
+            const v = e.target;
+            if (e.isIntersecting && e.intersectionRatio > 0.2) {
+              v.play().then(()=>v.classList.add('playing')).catch(()=>{});
+            } else {
+              v.pause(); v.classList.remove('playing');
+            }
+          });
+        }, {threshold:[0,0.2,0.5]});
+        vids.forEach(v=> io.observe(v));
+      } else {
+        vids.forEach(v=> { v.play().catch(()=>{}); v.classList.add('playing'); });
+      }
+    }
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initUI); else initUI();
+  })();
 </script>
 </body>
 </html>

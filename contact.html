@@ -5,9 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact & Book a Meeting — Sakura KGL</title>
   <link rel="stylesheet" href="style.css">
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
-<body>
+<body class="page-contact">
+  <div class="page-video-wrap">
+    <video class="bg-video" autoplay muted loop playsinline preload="metadata" poster="assets/bg-freight-poster.jpg">
+      <source src="assets/bg-freight.mp4" type="video/mp4">
+    </video>
+  </div>
 
 <header class="topbar" id="topbar">
   <a href="index.html" class="topbar-logo">
@@ -19,13 +23,12 @@
       <li><a href="index.html">Home</a></li>
       <li><a href="logistics.html">Freight Logistics</a></li>
       <li><a href="counseling.html">Business Advisory</a></li>
-      <li><a href="canteen.html">Canteen Mgmt</a></li>
       <li><a href="about.html">About Us</a></li>
     </ul>
   </nav>
   <div class="topbar-actions">
     <a href="contact.html" class="btn-ghost active-btn">Contact</a>
-    <a href="#booking" class="btn-primary">📅 Book a Meeting</a>
+    <a href="#booking" class="btn-primary">Book a Meeting</a>
   </div>
   <button class="menu-toggle" id="menu-toggle"><span></span><span></span><span></span></button>
 </header>
@@ -33,7 +36,7 @@
 <div class="page-hero">
   <div class="section-label">Get in Touch</div>
   <h1>Contact Sakura KGL</h1>
-  <p>We'd love to hear from you — send us a message or book a meeting directly with our Managing Director.</p>
+  <p>Have a question or a shipment to plan? Send us a message or book time with Claire, our Managing Director.</p>
   <div class="breadcrumb"><a href="index.html">Home</a> › <span>Contact</span></div>
 </div>
 
@@ -43,7 +46,7 @@
     <div class="booking-info">
       <div class="section-label">Reach Us</div>
       <h2>Get in Touch</h2>
-      <p>Whether you have a question, a project in mind, or simply want to learn more about our services — we're here to help.</p>
+      <p>Have a question, a shipment to plan, or just want to know more about what we do? Send us a message and we'll get back to you.</p>
 
       <div class="contact-detail">
         <div class="icon">📞</div>
@@ -84,8 +87,8 @@
       <div style="margin-top:2rem;padding:1.5rem;background:var(--green-100);border-radius:var(--radius-md);border-left:4px solid var(--green-600);">
         <div style="font-weight:700;color:var(--green-900);margin-bottom:0.4rem;font-size:0.9rem;">Office Hours</div>
         <div style="font-size:0.86rem;color:var(--text-mid);line-height:1.8;">
-          Monday – Friday: 8:00 AM – 6:00 PM<br>
-          Saturday: 9:00 AM – 1:00 PM<br>
+          Monday to Friday: 8:00 AM to 6:00 PM<br>
+          Saturday: 9:00 AM to 1:00 PM<br>
           Sunday: Closed
         </div>
       </div>
@@ -93,11 +96,14 @@
 
     <div class="form-card">
       <h3>Send Us a Message</h3>
-      <span class="form-subtitle">We typically respond within one business day.</span>
+      <span class="form-subtitle">We usually reply within one business day.</span>
 
       <div id="contact-alert" class="alert"></div>
 
-      <form id="contact-form" action="https://formspree.io/f/mwpnbjky" method="POST">
+      <form id="contact-form" action="send.php" method="POST">
+        <!-- honeypot spam trap: real visitors never see or fill this in -->
+        <input type="text" name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;opacity:0;height:0;">
+
         <div class="form-row">
           <div class="form-group">
             <label for="c-name">Full Name *</label>
@@ -122,7 +128,6 @@
             <option value="">Select a service...</option>
             <option>Freight Logistics</option>
             <option>Business Advisory</option>
-            <option>Canteen Management</option>
             <option>General Enquiry</option>
           </select>
         </div>
@@ -130,7 +135,7 @@
           <label for="c-message">Message *</label>
           <textarea id="c-message" name="message" rows="4" placeholder="Tell us how we can help..." required></textarea>
         </div>
-        <button type="submit" class="form-submit">✉️ Send Message</button>
+        <button type="submit" class="form-submit">Send Message</button>
       </form>
     </div>
   </div>
@@ -141,8 +146,8 @@
   <div class="section">
     <div style="text-align:center;margin-bottom:3rem;">
       <div class="section-label" style="justify-content:center;">Schedule a Session</div>
-      <h2 class="section-title">Book a Meeting with Our Managing Director</h2>
-      <p class="section-subtitle" style="margin:0 auto;">Sit down with Claire Benihirwe, MD of Sakura KGL, and get a personalised consultation on how we can serve your business.</p>
+      <h2 class="section-title">Book time with Claire, our Managing Director</h2>
+      <p class="section-subtitle" style="margin:0 auto;">Meet Claire for a focused conversation about your needs and practical next steps.</p>
     </div>
 
     <div class="booking-grid">
@@ -163,21 +168,23 @@
         <div style="padding:1.5rem;background:var(--green-100);border-radius:var(--radius-md);">
           <div style="font-weight:700;color:var(--green-900);margin-bottom:1rem;font-size:0.9rem;">What to Expect</div>
           <ul class="feature-list">
-            <li>30–60 minute structured discussion</li>
+            <li>30 to 60 minute structured discussion</li>
             <li>Personalised assessment of your needs</li>
             <li>Clear recommendations and next steps</li>
-            <li>No obligation — just an open conversation</li>
+            <li>No obligation, just an open conversation</li>
           </ul>
         </div>
       </div>
 
       <div class="form-card">
         <h3>Meeting Request Form</h3>
-        <span class="form-subtitle">Fill in your details and we'll confirm a time within 24 hours.</span>
+        <span class="form-subtitle">Tell us a few details and we'll confirm a meeting time within one business day.</span>
 
         <div id="booking-alert" class="alert"></div>
 
-        <form id="booking-form" action="https://formspree.io/f/mwpnbjky" method="POST">
+        <form id="booking-form" action="send.php" method="POST">
+          <!-- honeypot spam trap -->
+          <input type="text" name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;opacity:0;height:0;">
           <input type="hidden" name="_subject" value="Meeting Request — Sakura KGL">
           <div class="form-row">
             <div class="form-group">
@@ -203,9 +210,8 @@
             <label for="b-topic">Meeting Topic *</label>
             <select id="b-topic" name="meeting_topic" required>
               <option value="">Select a topic...</option>
-              <option>Freight Logistics — New Partnership</option>
-              <option>Business Advisory — Strategy Session</option>
-              <option>Canteen Management — Proposal Discussion</option>
+              <option>Freight Logistics: New Partnership</option>
+              <option>Business Advisory: Strategy Session</option>
               <option>General Business Discussion</option>
               <option>Partnership & Investment Enquiry</option>
             </select>
@@ -237,14 +243,14 @@
               <option>In-Person (Rwandex Office, Kigali)</option>
               <option>Video Call (Google Meet / Zoom)</option>
               <option>Phone Call</option>
-              <option>Flexible — Any Format</option>
+              <option>Flexible: Any Format</option>
             </select>
           </div>
           <div class="form-group">
             <label for="b-notes">Additional Notes</label>
             <textarea id="b-notes" name="notes" rows="3" placeholder="Brief agenda, specific questions, or anything else we should know..."></textarea>
           </div>
-          <button type="submit" class="form-submit">📅 Submit Meeting Request</button>
+          <button type="submit" class="form-submit">Submit Meeting Request</button>
         </form>
       </div>
     </div>
@@ -255,13 +261,12 @@
   <div class="footer-grid">
     <div class="footer-brand">
       <span class="logo-text">Sakura <span>KGL</span></span>
-      <span class="tagline">Your Ideal Type</span>
-      <p>Rwanda's trusted partner for logistics, business advisory, and canteen management.</p>
+      <span class="tagline">Kigali-based logistics & advisory</span>
+      <p>Rwanda's trusted partner for freight logistics and business advisory.</p>
     </div>
     <div class="footer-col"><h4>Services</h4><ul>
       <li><a href="logistics.html">Freight Logistics</a></li>
       <li><a href="counseling.html">Business Advisory</a></li>
-      <li><a href="canteen.html">Canteen Management</a></li>
       <li><a href="#booking">Book a Meeting</a></li>
     </ul></div>
     <div class="footer-col"><h4>Company</h4><ul>
@@ -281,47 +286,81 @@
 </footer>
 
 <script>
-  window.addEventListener('scroll',()=>document.getElementById('topbar').classList.toggle('scrolled',scrollY>30));
-  document.getElementById('menu-toggle').addEventListener('click',()=>document.getElementById('main-nav').classList.toggle('open'));
+  (function(){
+    function initUI(){
+      // Topbar scroll effect
+      const topbar = document.getElementById('topbar');
+      if (topbar) window.addEventListener('scroll', ()=> topbar.classList.toggle('scrolled', window.scrollY > 30));
 
-  // Set min date for booking to today
-  document.getElementById('b-date').min = new Date().toISOString().split('T')[0];
+      // Mobile menu
+      const menuToggle = document.getElementById('menu-toggle');
+      const mainNav = document.getElementById('main-nav');
+      if (menuToggle && mainNav) menuToggle.addEventListener('click', ()=> mainNav.classList.toggle('open'));
 
-  // Contact form
-  document.getElementById('contact-form').addEventListener('submit', async function(e) {
-    e.preventDefault();
-    const recaptcha = typeof grecaptcha !== 'undefined' ? grecaptcha.getResponse() : 'skip';
-    if (!recaptcha) { alert('Please verify you are not a robot.'); return; }
-    const alertEl = document.getElementById('contact-alert');
-    const btn = this.querySelector('.form-submit');
-    btn.textContent = 'Sending...'; btn.disabled = true;
-    const res = await fetch(this.action, { method:'POST', body:new FormData(this), headers:{'Accept':'application/json'} });
-    if (res.ok) {
-      this.reset(); if(typeof grecaptcha!=='undefined') grecaptcha.reset();
-      alertEl.className='alert success'; alertEl.textContent='✅ Message sent! We\'ll be in touch soon.';
-    } else {
-      alertEl.className='alert error'; alertEl.textContent='❌ Failed to send. Please try again or email us directly on info@sakurakgl.rw.';
+      // Background video visibility
+      const vids = Array.from(document.querySelectorAll('.bg-video'));
+      vids.forEach(v=>{ v.addEventListener('canplay', ()=> v.classList.add('visible')); v.play().catch(()=>{}); });
+      if ('IntersectionObserver' in window) {
+        const io = new IntersectionObserver((entries)=>{
+          entries.forEach(e=>{
+            if (e.isIntersecting && e.intersectionRatio > 0.2) e.target.play().catch(()=>{});
+            else e.target.pause();
+          });
+        }, {threshold:[0,0.2,0.5]});
+        vids.forEach(v=> io.observe(v));
+      }
+
+      // Booking minimum date
+      const bookingDate = document.getElementById('b-date');
+      if (bookingDate) bookingDate.min = new Date().toISOString().split('T')[0];
+
+      // Generic form submit handler, shared by both forms
+      function wireForm(formId, alertId, sendingLabel, defaultLabel, successMsg) {
+        const form = document.getElementById(formId);
+        if (!form) return;
+        form.addEventListener('submit', async function (e) {
+          e.preventDefault();
+          const alertEl = document.getElementById(alertId);
+          const btn = this.querySelector('.form-submit');
+
+          btn.disabled = true;
+          btn.textContent = sendingLabel;
+          alertEl.style.display = 'none';
+          alertEl.innerHTML = '';
+
+          try {
+            const response = await fetch(this.action, {
+              method: 'POST',
+              body: new FormData(this),
+              headers: { 'Accept': 'application/json' }
+            });
+            const result = await response.json();
+
+            if (response.ok && result.ok) {
+              this.reset();
+              alertEl.className = 'alert success';
+              alertEl.textContent = successMsg;
+            } else {
+              alertEl.className = 'alert error';
+              alertEl.textContent = result.error || 'Something went wrong. Please try again or email us directly.';
+            }
+          } catch (err) {
+            alertEl.className = 'alert error';
+            alertEl.textContent = 'Connection failed. Please check your internet and try again.';
+          }
+
+          alertEl.style.display = 'block';
+          btn.disabled = false;
+          btn.textContent = defaultLabel;
+          alertEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        });
+      }
+
+      wireForm('contact-form', 'contact-alert', 'Sending...', 'Send Message', 'Message sent. We will get back to you soon.');
+      wireForm('booking-form', 'booking-alert', 'Submitting...', 'Submit Meeting Request', 'Meeting request received. We will confirm within one business day.');
     }
-    btn.textContent='✉️ Send Message'; btn.disabled=false;
-    alertEl.scrollIntoView({behavior:'smooth',block:'center'});
-  });
-
-  // Booking form
-  document.getElementById('booking-form').addEventListener('submit', async function(e) {
-    e.preventDefault();
-    const alertEl = document.getElementById('booking-alert');
-    const btn = this.querySelector('.form-submit');
-    btn.textContent = 'Submitting...'; btn.disabled = true;
-    const res = await fetch(this.action, { method:'POST', body:new FormData(this), headers:{'Accept':'application/json'} });
-    if (res.ok) {
-      this.reset();
-      alertEl.className='alert success'; alertEl.textContent='✅ Meeting request submitted! We\'ll confirm your slot within 24 hours.';
-    } else {
-      alertEl.className='alert error'; alertEl.textContent='❌ Submission failed. Please call us directly at +250 788 501 317.';
-    }
-    btn.textContent='📅 Submit Meeting Request'; btn.disabled=false;
-    alertEl.scrollIntoView({behavior:'smooth',block:'center'});
-  });
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initUI); else initUI();
+  })();
 </script>
 </body>
 </html>

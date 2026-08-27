@@ -6,11 +6,16 @@
   <title>Freight Logistics — Sakura KGL</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="page-logistics">
+  <div class="page-video-wrap">
+    <video class="bg-video" autoplay muted loop playsinline preload="metadata" poster="assets/bg-freight-poster.jpg">
+      <source src="assets/bg-freight.mp4" type="video/mp4">
+    </video>
+  </div>
 
 <header class="topbar" id="topbar">
   <a href="index.html" class="topbar-logo">
-    <div class="logo-icon">S</div>
+    <div class="logo-image">S</div>
     <div class="logo-text">Sakura <span>KGL</span></div>
   </a>
   <nav>
@@ -18,22 +23,21 @@
       <li><a href="index.html">Home</a></li>
       <li><a href="logistics.html" class="active">Freight Logistics</a></li>
       <li><a href="counseling.html">Business Advisory</a></li>
-      <li><a href="canteen.html">Canteen Mgmt</a></li>
       <li><a href="about.html">About Us</a></li>
     </ul>
   </nav>
   <div class="topbar-actions">
     <a href="contact.html" class="btn-ghost">Contact</a>
-    <a href="contact.html#booking" class="btn-primary">📅 Book a Meeting</a>
+    <a href="contact.html#booking" class="btn-primary">Book a Meeting</a>
   </div>
   <button class="menu-toggle" id="menu-toggle"><span></span><span></span><span></span></button>
 </header>
 
 <!-- Page Hero -->
-<div class="page-hero" style="background-image: linear-gradient(135deg,rgba(7,26,13,0.97),rgba(10,61,31,0.88)), url('logistics.jpg'); background-size:cover; background-position:center;">
+<div class="page-hero">
   <div class="section-label">Our Services</div>
   <h1>Freight Logistics</h1>
-  <p>Seamless, reliable, and efficient supply chain management — from Rwanda to the world.</p>
+  <p>Reliable supply chain services, from Kigali to global partners.</p>
   <div class="breadcrumb">
     <a href="index.html">Home</a> › <span>Freight Logistics</span>
   </div>
@@ -44,8 +48,8 @@
   <div class="two-col">
     <div>
       <div class="section-label">Our Mission</div>
-      <h2 class="section-title">Your Supply Chain, Perfectly Managed</h2>
-      <p class="section-subtitle">To meet and exceed customer requirements, fostering satisfaction that leads to loyalty and the acquisition of new clients. We deliver on every commitment.</p>
+      <h2 class="section-title">Your Supply Chain, Practically Managed</h2>
+      <p class="section-subtitle">We aim to deliver dependable logistics that reduce delays and keep your business moving. We stand behind our work.</p>
       <ul class="feature-list">
         <li>End-to-end cargo visibility and tracking</li>
         <li>Expert customs clearance and documentation</li>
@@ -55,7 +59,7 @@
         <li>Management and logistics consulting</li>
       </ul>
       <br>
-      <a href="contact.html#booking" class="btn-primary" style="font-size:0.95rem;padding:0.75rem 1.8rem;border-radius:8px;">📅 Discuss Your Needs</a>
+      <a href="contact.html#booking" class="btn-primary" style="font-size:0.95rem;padding:0.75rem 1.8rem;border-radius:8px;">Discuss Your Needs</a>
     </div>
     <div>
       <div style="background:linear-gradient(135deg,var(--green-100),#c8ebd4);border-radius:var(--radius-lg);padding:3rem;height:100%;min-height:360px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;position:relative;overflow:hidden;">
@@ -128,9 +132,9 @@
 <!-- Vision -->
 <div class="section">
   <div class="accent-panel" style="text-align:center;max-width:800px;margin:0 auto;">
-    <div class="section-label" style="justify-content:center;">Our Vision</div>
-    <h2 class="section-title">Becoming the Global Benchmark for Professional Service</h2>
-    <p class="section-subtitle" style="margin:0 auto 2rem;max-width:550px;">We set the standard for logistics excellence in Rwanda and beyond — reliable, innovative, and uncompromising in quality.</p>
+  <div class="section-label" style="justify-content:center;">Our Vision</div>
+  <h2 class="section-title">Being a reliable provider of professional logistics services</h2>
+  <p class="section-subtitle" style="margin:0 auto 2rem;max-width:550px;">We focus on consistent, practical service that keeps shipments moving and reduces headaches for our clients.</p>
     <a href="contact.html#booking" class="btn-hero-primary">Start a Conversation →</a>
   </div>
 </div>
@@ -140,10 +144,10 @@
   <div class="section-label">Foundation</div>
   <h2 class="section-title" style="margin-bottom:2rem;">Core Values</h2>
   <div class="value-cards">
-    <div class="value-card"><span class="v-icon">🤝</span><h3>Integrity</h3><p>Unwavering honesty in every transaction and relationship</p></div>
-    <div class="value-card"><span class="v-icon">🔒</span><h3>Reliability</h3><p>Dependable delivery on every promise we make</p></div>
-    <div class="value-card"><span class="v-icon">⭐</span><h3>Professionalism</h3><p>World-class standards in every interaction</p></div>
-    <div class="value-card"><span class="v-icon">🎯</span><h3>Client Focus</h3><p>Your success is our most important metric</p></div>
+    <div class="value-card"><span class="v-icon">🤝</span><h3>Straight talk</h3><p>You'll know exactly where your shipment stands, no guessing</p></div>
+    <div class="value-card"><span class="v-icon">🔒</span><h3>We show up</h3><p>Promised pickup times and delivery dates that actually hold</p></div>
+    <div class="value-card"><span class="v-icon">⭐</span><h3>Careful handling</h3><p>Your cargo is treated like it matters, because it does</p></div>
+    <div class="value-card"><span class="v-icon">🎯</span><h3>Your goals first</h3><p>We plan around what your business actually needs</p></div>
   </div>
 </div>
 
@@ -151,13 +155,12 @@
   <div class="footer-grid">
     <div class="footer-brand">
       <span class="logo-text">Sakura <span>KGL</span></span>
-      <span class="tagline">Your Ideal Type</span>
-      <p>Rwanda's trusted partner for logistics, business advisory, and professional canteen management.</p>
+      <span class="tagline">Kigali-based logistics & advisory</span>
+      <p>Rwanda's trusted partner for freight logistics and business advisory.</p>
     </div>
     <div class="footer-col"><h4>Services</h4><ul>
       <li><a href="logistics.html">Freight Logistics</a></li>
       <li><a href="counseling.html">Business Advisory</a></li>
-      <li><a href="canteen.html">Canteen Management</a></li>
       <li><a href="contact.html#booking">Book a Meeting</a></li>
     </ul></div>
     <div class="footer-col"><h4>Company</h4><ul>
@@ -176,8 +179,37 @@
   </div>
 </footer>
 <script>
-  window.addEventListener('scroll',()=>document.getElementById('topbar').classList.toggle('scrolled',scrollY>30));
-  document.getElementById('menu-toggle').addEventListener('click',()=>document.getElementById('main-nav').classList.toggle('open'));
+  (function(){
+    function initUI(){
+      const topbar = document.getElementById('topbar');
+      if (topbar) window.addEventListener('scroll', ()=> topbar.classList.toggle('scrolled', window.scrollY > 30));
+
+      const menuToggle = document.getElementById('menu-toggle');
+      const mainNav = document.getElementById('main-nav');
+      if (menuToggle && mainNav) menuToggle.addEventListener('click', ()=> mainNav.classList.toggle('open'));
+
+      const vids = Array.from(document.querySelectorAll('.bg-video'));
+      if (!vids.length) return;
+      vids.forEach(v=>{ v.addEventListener('canplay', ()=> v.classList.add('visible')); v.play().catch(()=>{}); });
+
+      if ('IntersectionObserver' in window) {
+        const io = new IntersectionObserver((entries)=>{
+          entries.forEach(e=>{
+            const v = e.target;
+            if (e.isIntersecting && e.intersectionRatio > 0.2) {
+              v.play().then(()=>v.classList.add('playing')).catch(()=>{});
+            } else {
+              v.pause(); v.classList.remove('playing');
+            }
+          });
+        }, {threshold:[0,0.2,0.5]});
+        vids.forEach(v=> io.observe(v));
+      } else {
+        vids.forEach(v=> { v.play().catch(()=>{}); v.classList.add('playing'); });
+      }
+    }
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initUI); else initUI();
+  })();
 </script>
 </body>
 </html>

@@ -39,6 +39,12 @@ body {
   overflow-x: hidden;
 }
 
+/* Pages with a video background: let content sections stay see-through
+   so the video reads through the white space instead of being hidden. */
+body[class^="page-"] {
+  background: transparent;
+}
+
 /* ─── Typography ─── */
 h1, h2, h3 {
   font-family: 'Cormorant Garamond', serif;
@@ -187,20 +193,12 @@ a  { color: inherit; text-decoration: none; }
   min-height: 100vh;
   display: flex; align-items: center;
   overflow: hidden;
-  background: var(--green-900);
   padding-top: 72px;
-}
-
-.hero-bg {
-  position: absolute; inset: 0;
-  background-image: url('logistics.jpg');
-  background-size: cover; background-position: center;
-  opacity: 0.22;
 }
 
 .hero-overlay {
   position: absolute; inset: 0;
-  background: linear-gradient(135deg, rgba(7,26,13,0.96) 45%, rgba(10,61,31,0.7) 100%);
+  background: linear-gradient(135deg, rgba(7,26,13,0.82) 40%, rgba(10,61,31,0.55) 100%);
 }
 
 .hero-content {
@@ -335,7 +333,7 @@ a  { color: inherit; text-decoration: none; }
 
 .section-full {
   padding: 6rem 3rem;
-  background: var(--off-white);
+  background: rgba(247,250,248,0.6);
 }
 
 .section-full .section { padding: 0; }
@@ -418,6 +416,95 @@ a  { color: inherit; text-decoration: none; }
 .card h3 { color: var(--green-900); margin-bottom: 0.7rem; }
 .card p  { font-size: 0.92rem; line-height: 1.75; }
 
+/* ─── Trust Strip (homepage) ─── */
+.trust-strip {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.5rem;
+  background: var(--green-900);
+  padding: 1.1rem 3rem;
+  border-bottom: 1px solid rgba(201,168,76,0.14);
+}
+
+.trust-strip span {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  color: rgba(255,255,255,0.7);
+}
+
+@media (max-width: 768px) {
+  .trust-strip { gap: 1rem 1.6rem; padding: 1rem 1.5rem; }
+}
+
+/* ─── Pillar Cards (homepage) ─── */
+.pillar-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.pillar-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 380px;
+  border-radius: var(--radius-lg);
+  padding: 2.6rem;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-decoration: none;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.pillar-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+.pillar-tag {
+  display: inline-block;
+  align-self: flex-start;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--gold-light);
+  background: rgba(7,26,13,0.5);
+  border: 1px solid rgba(232,201,122,0.4);
+  border-radius: 100px;
+  padding: 0.35rem 0.9rem;
+  margin-bottom: auto;
+}
+
+.pillar-card h3 {
+  color: white;
+  font-size: 1.7rem;
+  margin-bottom: 0.7rem;
+  margin-top: 1.5rem;
+}
+
+.pillar-card p {
+  color: rgba(255,255,255,0.82);
+  font-size: 0.94rem;
+  line-height: 1.75;
+  margin-bottom: 1.4rem;
+}
+
+.pillar-link {
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: var(--gold-light);
+  transition: gap var(--transition);
+}
+
+.pillar-card:hover .pillar-link { text-decoration: underline; }
+
 /* ─── Feature List ─── */
 .feature-list {
   list-style: none;
@@ -456,7 +543,11 @@ a  { color: inherit; text-decoration: none; }
 
 /* ─── Accent Panel ─── */
 .accent-panel {
-  background: linear-gradient(135deg, var(--green-800), var(--green-700));
+  background:
+    linear-gradient(135deg, rgba(7,26,13,0.93), rgba(13,82,41,0.9)),
+    url('https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=1200&q=80');
+  background-size: cover;
+  background-position: center;
   border-radius: var(--radius-lg);
   padding: 3rem;
   color: white;
@@ -669,11 +760,97 @@ a  { color: inherit; text-decoration: none; }
 
 /* ─── Page Hero (inner pages) ─── */
 .page-hero {
-  background: linear-gradient(135deg, var(--green-900), var(--green-800));
+  background: linear-gradient(135deg, rgba(7,26,13,0.55), rgba(10,61,31,0.4));
   padding: 8rem 3rem 5rem;
   text-align: center;
   position: relative;
   overflow: hidden;
+}
+
+/* Video background wrapper — pinned behind the entire page, every section
+   (light or dark) sits on top of it with its own translucent tint. */
+.page-video-wrap {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+  background: var(--green-900);
+}
+.page-video-wrap video.bg-video {
+  position: absolute;
+  left: 50%; top: 50%;
+  transform: translate(-50%, -50%) scale(1.03);
+  min-width: 100%; min-height: 100%;
+  width: auto; height: auto;
+  object-fit: cover;
+  display: block;
+  opacity: 0;
+  transition: opacity 1200ms ease;
+  filter: brightness(0.72) saturate(1.05);
+}
+.page-video-wrap video.bg-video.visible { opacity: 1; }
+
+/* Main content sits above the fixed video */
+body[class^="page-"] > *:not(.page-video-wrap) {
+  position: relative;
+  z-index: 2;
+}
+
+/* Logistics page — translucent panels over the shared background video */
+.page-logistics .section-full {
+  background: rgba(247,249,248,0.55);
+}
+
+/* Soften card surfaces so the video shows through subtly behind them */
+.page-logistics .card,
+.page-logistics .form-card {
+  background: rgba(255,255,255,0.9);
+  border: 1px solid rgba(10,61,31,0.06);
+  box-shadow: 0 8px 24px rgba(7,26,13,0.06);
+  backdrop-filter: blur(6px);
+}
+
+/* Homepage panels */
+.page-index .section-full,
+.page-index .section {
+  background: rgba(255,255,255,0.6);
+}
+.page-index .card,
+.page-index .form-card {
+  background: rgba(255,255,255,0.94);
+  border: 1px solid rgba(10,61,31,0.06);
+  box-shadow: 0 8px 24px rgba(7,26,13,0.06);
+}
+
+/* About page panels */
+.page-about .section-full,
+.page-about .section {
+  background: rgba(255,255,255,0.6);
+}
+.page-about .card,
+.page-about .form-card {
+  background: rgba(255,255,255,0.93);
+}
+
+/* Advisory page panels */
+.page-counseling .section-full,
+.page-counseling .section {
+  background: rgba(255,255,255,0.6);
+}
+.page-counseling .card,
+.page-counseling .form-card {
+  background: rgba(255,255,255,0.93);
+}
+
+/* Contact page panels */
+.page-contact .section-full,
+.page-contact .section {
+  background: rgba(255,255,255,0.62);
+}
+.page-contact .form-card,
+.page-contact .card {
+  background: rgba(255,255,255,0.95);
 }
 
 .page-hero::before {
@@ -761,7 +938,11 @@ a  { color: inherit; text-decoration: none; }
 
 /* ─── Banner CTA ─── */
 .banner-cta {
-  background: linear-gradient(135deg, var(--green-800), var(--green-700));
+  background:
+    linear-gradient(135deg, rgba(7,26,13,0.94), rgba(13,82,41,0.9)),
+    url('https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&w=1400&q=80');
+  background-size: cover;
+  background-position: center;
   border-radius: var(--radius-lg);
   padding: 4rem 3rem;
   text-align: center;
@@ -793,7 +974,43 @@ a  { color: inherit; text-decoration: none; }
 .alert.success { background: #d4f0de; color: #0d5229; border: 1px solid #b0dfc2; display: block; }
 .alert.error   { background: #fce8e8; color: #8b0000; border: 1px solid #f5c0c0; display: block; }
 
-/* ─── Responsive ─── */
+/* ─── Company Video Showcase ─── */
+.video-showcase {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  background: var(--green-900);
+  aspect-ratio: 16 / 9;
+}
+.video-showcase video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.video-showcase .video-caption {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  padding: 1.2rem 1.5rem;
+  background: linear-gradient(0deg, rgba(7,26,13,0.75), transparent);
+  color: rgba(255,255,255,0.85);
+  font-size: 0.82rem;
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .video-showcase { border-radius: var(--radius-md); }
+}
+
+/* ─── Responsive: pillar & trust strip already covered above; extra pass ─── */
+@media (max-width: 480px) {
+  .pillar-card { padding: 1.8rem; min-height: 300px; }
+  .pillar-card h3 { font-size: 1.4rem; }
+  .stat-number { font-size: 2.1rem; }
+  .value-cards { grid-template-columns: 1fr; }
+  .contact-detail { font-size: 0.85rem; }
+}
 @media (max-width: 1024px) {
   .hero-content { grid-template-columns: 1fr; gap: 3rem; }
   .hero-stats { grid-template-columns: repeat(4, 1fr); }
