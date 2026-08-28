@@ -39,3 +39,9 @@ GitHub Pages hosts static HTML/CSS/JS but does not execute PHP. The visual websi
 4. Confirm the phone numbers, email addresses, address and legal wording.
 5. Confirm that “Licensed & Insured” and any network/reach statements remain accurate for the live company.
 6. Test both forms on the actual PHP host.
+
+## Visual upgrade — green edition
+
+This version uses the green from the supplied Sakura logo as the primary brand color, with the logo's muted gold as the accent. The homepage and internal page heroes now use crossfading cinematic video backgrounds. The video rotation combines the supplied Sakura freight footage with selected Pexels logistics and business-advisory footage. See `MEDIA-SOURCES.md` for the source pages.
+
+Stock footage is presented as atmospheric background material and is not represented as Sakura KGL's own operations.

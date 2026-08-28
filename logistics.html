@@ -35,7 +35,11 @@
 
 
 <main>
-  <section class="page-hero">
+  <section class="page-hero video-rotator" data-sources="assets/bg-freight.mp4|https://videos.pexels.com/video-files/6618031/6618031-uhd_3840_2160_24fps.mp4|https://videos.pexels.com/video-files/9211525/9211525-hd_1920_1080_25fps.mp4">
+    <div class="page-hero-media" aria-hidden="true">
+      <video class="bg-video-layer is-active" autoplay muted playsinline preload="metadata" poster="assets/bg-freight-poster.jpg"></video>
+      <video class="bg-video-layer" autoplay muted playsinline preload="metadata"></video>
+    </div>
     <div class="container page-hero-inner">
       <div class="kicker">Our Services</div>
       <h1>Freight Logistics</h1>

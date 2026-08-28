@@ -66,6 +66,49 @@
     counters.forEach(el => counterObserver.observe(el));
   }
 
+  // Cinematic multi-video backgrounds: preload the next clip and crossfade between layers.
+  document.querySelectorAll('.video-rotator').forEach(root => {
+    const sources = (root.dataset.sources || '').split('|').map(s => s.trim()).filter(Boolean);
+    const layers = Array.from(root.querySelectorAll('.bg-video-layer'));
+    if (sources.length < 2 || layers.length < 2) return;
+
+    let sourceIndex = 0;
+    let activeLayer = 0;
+    const prepare = (layer, src) => {
+      layer.src = src;
+      layer.load();
+      const play = () => layer.play().catch(() => {});
+      if (layer.readyState >= 3) play(); else layer.addEventListener('canplay', play, { once: true });
+    };
+
+    prepare(layers[0], sources[0]);
+    prepare(layers[1], sources[1 % sources.length]);
+
+    const rotate = () => {
+      const nextIndex = (sourceIndex + 1) % sources.length;
+      const nextLayer = activeLayer === 0 ? 1 : 0;
+      const next = layers[nextLayer];
+      next.pause();
+      next.classList.remove('is-active');
+      next.src = sources[nextIndex];
+      next.load();
+      const show = () => {
+        next.play().catch(() => {});
+        requestAnimationFrame(() => next.classList.add('is-active'));
+        layers[activeLayer].classList.remove('is-active');
+        layers[activeLayer].pause();
+        activeLayer = nextLayer;
+        sourceIndex = nextIndex;
+      };
+      if (next.readyState >= 3) show(); else next.addEventListener('canplay', show, { once: true });
+    };
+
+    const interval = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 18000 : 9000;
+    const timer = setInterval(rotate, interval);
+    root.addEventListener('mouseenter', () => layers[activeLayer].play().catch(() => {}));
+    window.addEventListener('pagehide', () => clearInterval(timer), { once: true });
+  });
+
   // Set minimum booking date to today, using local date.
   const bookingDate = document.getElementById('b-date');
   if (bookingDate) {
@@ -74,7 +117,7 @@
     bookingDate.min = localDate;
   }
 
-  // Form handler for PHP endpoint.
+  // Form handler for Formspree endpoint.
   function wireForm(formId, alertId, sendingText, defaultText, successText) {
     const form = document.getElementById(formId);
     const alertEl = document.getElementById(alertId);
@@ -94,8 +137,9 @@
           body: new FormData(form),
           headers: { 'Accept': 'application/json' }
         });
-        const result = await response.json();
-        if (response.ok && result.ok) {
+        let result = {};
+        try { result = await response.json(); } catch (_) {}
+        if (response.ok) {
           form.reset();
           alertEl.className = 'alert success';
           alertEl.textContent = successText;

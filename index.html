@@ -36,10 +36,10 @@
 
 <main>
   <section class="hero">
-    <div class="hero-media" aria-hidden="true">
-      <video autoplay muted loop playsinline poster="assets/bg-freight-poster.jpg">
-        <source src="assets/bg-freight.mp4" type="video/mp4">
-      </video>
+    <div class="hero-media video-rotator" aria-hidden="true" data-sources="assets/bg-freight.mp4|https://videos.pexels.com/video-files/6618031/6618031-uhd_3840_2160_24fps.mp4|https://videos.pexels.com/video-files/9211525/9211525-hd_1920_1080_25fps.mp4|https://videos.pexels.com/video-files/8124269/8124269-hd_1920_1080_30fps.mp4">
+      <video class="bg-video-layer is-active" autoplay muted playsinline preload="metadata" poster="assets/bg-freight-poster.jpg"></video>
+      <video class="bg-video-layer" autoplay muted playsinline preload="metadata"></video>
+      <div class="media-shimmer"></div>
     </div>
     <div class="container hero-content">
       <div class="hero-grid">
@@ -85,7 +85,7 @@
             <span class="btn-link">Explore Logistics <span>→</span></span>
           </div>
         </a>
-        <a class="pillar" href="counseling.html" style="background-image:url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1400&q=85')">
+        <a class="pillar" href="counseling.html" style="background-image:url('https://images.pexels.com/videos/8124269/administration-adult-age-aging-8124269.jpeg?auto=compress&dpr=1&h=900&w=1600')">
           <div class="pillar-content">
             <div class="pillar-num">02 / Business Advisory</div>
             <h3>Turn operational challenges into growth.</h3>
@@ -93,6 +93,17 @@
             <span class="btn-link">Explore Advisory <span>→</span></span>
           </div>
         </a>
+      </div>
+
+      <div class="media-strip reveal" aria-label="Sakura KGL visual showcase">
+        <article class="media-tile">
+          <img src="https://images.pexels.com/videos/6618031/pexels-photo-6618031.jpeg?auto=compress&dpr=1&h=900&w=1600" alt="Aerial container port and cargo operations" loading="lazy">
+          <div class="media-tile-content"><div class="kicker" style="color:var(--gold-light)">Freight in Motion</div><h3>Built around the movement of cargo.</h3><p>Ports, containers and coordinated freight operations.</p></div>
+        </article>
+        <article class="media-tile">
+          <img src="https://images.pexels.com/videos/8124269/administration-adult-age-aging-8124269.jpeg?auto=compress&dpr=1&h=900&w=1600" alt="Business strategy presentation in a professional office" loading="lazy">
+          <div class="media-tile-content"><div class="kicker" style="color:var(--gold-light)">Advisory in Action</div><h3>Better decisions. Stronger operations.</h3><p>Practical conversations that turn operational challenges into action.</p></div>
+        </article>
       </div>
     </div>
   </section>
